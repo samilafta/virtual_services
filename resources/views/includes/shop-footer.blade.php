@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-3 col-sm-6 col-12">
                     <div class="footer-widget footer-logo">
-                        <img src="{{ asset('shop/assets/images/logo2.png') }}" alt="">
+                        <img src="{{ asset('shop/assets/images/virtual2.png') }}" alt="">
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from</p>
                         <ul class="socil-icon d-flex">
                             <li><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
@@ -17,41 +17,41 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 col-12">
-                    <div class="footer-widget footer-menu">
-                        <h2>Spacial Menu</h2>
-                        <ul>
-                            <li><a href="account.html">My Account</a></li>
-                            <li><a href="checkout.html">Checkout</a></li>
-                            <li><a href="javascript:void(0)">Help</a></li>
-                            <li><a href="javascript:void(0)">Support</a></li>
-                            <li><a href="javascript:void(0)">FAQ</a></li>
-                        </ul>
-                    </div>
-                </div>
+                {{--<div class="col-lg-3 col-sm-6 col-12">--}}
+                    {{--<div class="footer-widget footer-menu">--}}
+                        {{--<h2>Spacial Menu</h2>--}}
+                        {{--<ul>--}}
+                            {{--<li><a href="account.html">My Account</a></li>--}}
+                            {{--<li><a href="checkout.html">Checkout</a></li>--}}
+                            {{--<li><a href="javascript:void(0)">Help</a></li>--}}
+                            {{--<li><a href="javascript:void(0)">Support</a></li>--}}
+                            {{--<li><a href="javascript:void(0)">FAQ</a></li>--}}
+                        {{--</ul>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
                 <div class="col-lg-3 col-sm-6 col-12">
                     <div class="footer-widget footer-contact">
                         <h2>Contact us</h2>
                         <ul>
-                            <li><i class="fa fa-map-marker"></i>House No. 09 , Road No.25 Dhaka,Bangladesh </li>
-                            <li><i class="fa fa-phone"></i>+1(888)234-56789 <span>+1(888)234-56789</span> </li>
-                            <li><i class="fa fa-envelope-o"></i>youremail@gmail.com</li>
+                            <li><i class="fa fa-map-marker"></i>House No. 09 , Ashale Botwe </li>
+                            <li><i class="fa fa-phone"></i>+233 0245 65 7852 <span>+233 0547 57 6916</span> </li>
+                            <li><i class="fa fa-envelope-o"></i>virtualservices@gmail.com</li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 col-12">
-                    <div class="footer-widget instagram">
-                        <h2>Join to Newsletter</h2>
-                        <ul class="d-flex">
-                            <li><a href="#"><img src="{{ asset('shop/assets/images/instragram/1.jpg') }}" alt=""></a></li>
-                            <li><a href="#"><img src="{{ asset('shop/assets/images/instragram/2.jpg') }}" alt=""></a></li>
-                            <li><a href="#"><img src="{{ asset('shop/assets/images/instragram/3.jpg') }}" alt=""></a></li>
-                            <li><a href="#"><img src="{{ asset('shop/assets/images/instragram/4.jpg') }}" alt=""></a></li>
-                            <li><a href="#"><img src="{{ asset('shop/assets/images/instragram/5.jpg') }}" alt=""></a></li>
-                            <li><a href="#"><img src="{{ asset('shop/assets/images/instragram/6.jpg') }}" alt=""></a></li>
-                        </ul>
-                    </div>
-                </div>
+                {{--<div class="col-lg-3 col-sm-6 col-12">--}}
+                    {{--<div class="footer-widget instagram">--}}
+                        {{--<h2>Join to Newsletter</h2>--}}
+                        {{--<ul class="d-flex">--}}
+                            {{--<li><a href="#"><img src="{{ asset('shop/assets/images/instragram/1.jpg') }}" alt=""></a></li>--}}
+                            {{--<li><a href="#"><img src="{{ asset('shop/assets/images/instragram/2.jpg') }}" alt=""></a></li>--}}
+                            {{--<li><a href="#"><img src="{{ asset('shop/assets/images/instragram/3.jpg') }}" alt=""></a></li>--}}
+                            {{--<li><a href="#"><img src="{{ asset('shop/assets/images/instragram/4.jpg') }}" alt=""></a></li>--}}
+                            {{--<li><a href="#"><img src="{{ asset('shop/assets/images/instragram/5.jpg') }}" alt=""></a></li>--}}
+                            {{--<li><a href="#"><img src="{{ asset('shop/assets/images/instragram/6.jpg') }}" alt=""></a></li>--}}
+                        {{--</ul>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             </div>
         </div>
     </div>
@@ -59,13 +59,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-12">
-                    <p>&copy;2018 Your Website Name All Right Reserved</p>
+                    <p>&copy;2019 Virtual Services All Right Reserved</p>
                 </div>
                 <div class="col-md-6 col-12">
                     <ul class="d-flex">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="{{ route('index') }}">Home</a></li>
+                        <li><a href="{{ route('shop.products.shop') }}">Shop</a></li>
+
                     </ul>
                 </div>
             </div>

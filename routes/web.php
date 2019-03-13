@@ -11,9 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+//Route::get('/', function () {
+//    return view('index');
+//});
+
+Route::get('/', [
+    'uses' => 'ShopFrontController@index',
+    'as' => 'index'
+]);
 
 Auth::routes();
 
@@ -22,6 +27,54 @@ Route::get('customer/login', [
     'as' => 'auth.customer.login'
 ]);
 
+Route::post('/customer/login', [
+    'uses' => 'Auth\LoginController@customerLogin',
+    'as' => 'customer.login'
+]);
+
+Route::get('/customer/register', [
+    'uses' => 'Auth\RegisterController@customerRegisterForm',
+    'as' => 'customer.register'
+]);
+
+Route::post('register/customer', [
+   'uses' => 'Auth\RegisterController@createCustomer',
+    'as' => 'customer.create'
+]);
+
+#######################SHOP CONTROLLER SIDE###############################################
+
+Route::get('category/{id}' , [
+    'uses' => 'ShopFrontController@categoryPage',
+    'as' => 'shop.category'
+]);
+
+Route::get('product/{id}' , [
+    'uses' => 'ShopFrontController@productDetail',
+    'as' => 'shop.product.detail'
+]);
+
+Route::get('shop/products' , [
+    'uses' => 'ShopFrontController@productsDisplay',
+    'as' => 'shop.products.shop'
+]);
+
+
+
+Route::group(['middleware' => ['auth:customer']], function() {
+
+
+
+
+});
+
+
+
+
+
+###########################################################################################
+
+##############################ADMIN SIDE###########################################
 
 Route::group(['middleware' => ['auth']], function() {
 
@@ -47,7 +100,6 @@ Route::group(['middleware' => ['auth']], function() {
 
 
 
-
-
-
 });
+
+######################################################################################

@@ -6,3 +6,11 @@ Integrated circuits.
 Power electronics.
 Optoelectronics.
 Semiconductor devices.
+
+
+
+id
+product_id
+quantity
+user_id
+session_id

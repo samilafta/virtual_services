@@ -68,55 +68,55 @@
                 <div class="col-lg-4 items col-md-6 col-12">
                     <div class="featured-wrap">
                         <div class="featured-img">
-                            <img src="{{ asset('shop/assets/images/featured/1.jpg') }}" alt="">
+                            <img src="{{ asset($first_cat->image) }}" alt="">
                         </div>
                         <div class="featured-content text-right">
-                            <h2>Style For<span> Man </span></h2>
-                            <a href="shop.html">Shop Now</a>
+                            <h2>{{ $first_cat->name}}</h2>
+                            <a href="{{ route('shop.category', ['id' => $first_cat->id]) }}">Shop Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-8 items col-md-6 col-12">
                     <div class="featured-wrap">
                         <div class="featured-img">
-                            <img src="{{ asset('shop/assets/images/featured/2.jpg') }}" alt="">
+                            <img src="{{ asset($second_cat->image) }}" alt="">
                         </div>
                         <div class="featured-content">
-                            <h2>Fasion For<span> Woman </span></h2>
-                            <a href="shop.html">Shop Now</a>
+                            <h2>{{ $second_cat->name }}</h2>
+                            <a href="{{ route('shop.category', ['id' => $second_cat->id]) }}">Shop Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 items col-md-6 col-12">
                     <div class="featured-wrap">
                         <div class="featured-img">
-                            <img src="{{ asset('shop/assets/images/featured/3.jpg') }}" alt="">
+                            <img src="{{ asset($third_cat->image) }}" alt="">
                         </div>
                         <div class="featured-content">
-                            <h2>Bags</h2>
-                            <a href="shop.html">Shop Now</a>
+                            <h2>{{ $third_cat->name }}</h2>
+                            <a href="{{ route('shop.category', ['id' => $third_cat->id]) }}">Shop Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 items col-md-6 col-12">
                     <div class="featured-wrap">
                         <div class="featured-img">
-                            <img src="{{ asset('shop/assets/images/featured/4.jpg') }}" alt="">
+                            <img src="{{ asset($fourth_cat->image) }}" alt="">
                         </div>
                         <div class="featured-content">
-                            <h2>Watches</h2>
-                            <a href="shop.html">Shop Now</a>
+                            <h2>{{ $fourth_cat->name }}</h2>
+                            <a href="{{ route('shop.category', ['id' => $fourth_cat->id]) }}">Shop Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 items col-md-6 col-12">
                     <div class="featured-wrap">
                         <div class="featured-img">
-                            <img src="{{ asset('shop/assets/images/featured/5.jpg') }}" alt="">
+                            <img src="{{ asset($fifth_cat->image) }}" alt="">
                         </div>
                         <div class="featured-content">
-                            <h2>Man’s</h2>
-                            <a href="shop.html">Shop Now</a>
+                            <h2>{{ $fifth_cat->name }}</h2>
+                            <a href="{{ route('shop.category', ['id' => $fifth_cat->id]) }}">Shop Now</a>
                         </div>
                     </div>
                 </div>
@@ -136,118 +136,36 @@
                 </div>
             </div>
             <ul class="row">
-                <li class="col-xl-3 col-lg-4 col-sm-6 col-12">
-                    <div class="product-wrap">
-                        <div class="product-img">
-                            <span>New</span>
-                            <img src="{{ asset('shop/assets/images/product/1.jpg') }}" alt="">
-                            <div class="product-icon flex-style">
-                                <ul>
-                                    <li><a data-toggle="modal" data-target="#exampleModalCenter" href="javascript:void(0);"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="wishlist.html"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li>
-                                </ul>
+
+                @if($products->count() > 0)
+                    @foreach($products as $product)
+
+                        <li class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                            <div class="product-wrap">
+                                <div class="product-img">
+                                    <img src="{{ asset($product->image) }}" alt="">
+                                    <div class="product-icon flex-style">
+                                        <ul>
+                                            <li><a data-toggle="modal" data-target="#exampleModalCenter" href="javascript:void(0);"><i class="fa fa-eye"></i></a></li>
+                                            {{--<li><a href="wishlist.html"><i class="fa fa-heart"></i></a></li>--}}
+                                            <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="product-content">
+                                    <h3><a href="{{ route('shop.product.detail', ['id' => $product->id]) }}">{{ $product->name }}</a></h3>
+                                    <p class="pull-left">GHS {{ $product->price }}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="product-content">
-                            <h3><a href="Single-product.html">Lovely Blue Dress</a></h3>
-                            <p class="pull-left">$125
-                                <del>$156</del>
-                            </p>
-                            <ul class="pull-right d-flex">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star-half-o"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li class="col-xl-3 col-lg-4 col-sm-6 col-12">
-                    <div class="product-wrap">
-                        <div class="product-img">
-                            <span>Sale</span>
-                            <img src="{{ asset('shop/assets/images/product/2.jpg') }}" alt="">
-                            <div class="product-icon flex-style">
-                                <ul>
-                                    <li><a data-toggle="modal" data-target="#exampleModalCenter" href="javascript:void(0);"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="wishlist.html"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <h3><a href="Single-product.html">Lovely Blue Dress</a></h3>
-                            <p class="pull-left">$125
-                                <del>$156</del>
-                            </p>
-                            <ul class="pull-right d-flex">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star-half-o"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li class="col-xl-3 col-lg-4 col-sm-6 col-12">
-                    <div class="product-wrap">
-                        <div class="product-img">
-                            <span>Sale</span>
-                            <img src="{{ asset('shop/assets/images/product/3.jpg') }}" alt="">
-                            <div class="product-icon flex-style">
-                                <ul>
-                                    <li><a data-toggle="modal" data-target="#exampleModalCenter" href="javascript:void(0);"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="wishlist.html"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <h3><a href="Single-product.html">Lovely Blue Dress</a></h3>
-                            <p class="pull-left">$125
-                                <del>$156</del>
-                            </p>
-                            <ul class="pull-right d-flex">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star-half-o"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li class="col-xl-3 col-lg-4 col-sm-6 col-12">
-                    <div class="product-wrap">
-                        <div class="product-img">
-                            <span>New</span>
-                            <img src="{{ asset('shop/assets/images/product/4.jpg') }}" alt="">
-                            <div class="product-icon flex-style">
-                                <ul>
-                                    <li><a data-toggle="modal" data-target="#exampleModalCenter" href="javascript:void(0);"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="wishlist.html"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <h3><a href="Single-product.html">Lovely Blue Dress</a></h3>
-                            <p class="pull-left">$125
-                                <del>$156</del>
-                            </p>
-                            <ul class="pull-right d-flex">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star-half-o"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
+                        </li>
+
+                    @endforeach
+                @else
+                    <h4 class="text-center">No Products Available</h4>
+                @endif
+
+
             </ul>
         </div>
     </div>

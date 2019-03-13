@@ -49,7 +49,7 @@
         <div class="sidebar-wrapper">
             <div class="logo">
                 <a href="{{ route('home') }}">
-                    Virtual Services
+                    <img src="{{ asset('shop/assets/images/virtual.png') }}" width="200px" />
                 </a>
             </div>
 
@@ -127,29 +127,10 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="ti-panel"></i>
-                                <p>Stats</p>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="ti-bell"></i>
-                                <p class="notification">5</p>
-                                <p>Notifications</p>
-                                <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Notification 1</a></li>
-                                <li><a href="#">Notification 2</a></li>
-                                <li><a href="#">Notification 3</a></li>
-                                <li><a href="#">Notification 4</a></li>
-                                <li><a href="#">Another notification</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="ti-settings"></i>
-                                <p>Settings</p>
+                                <i class="ti-user"></i>
+                                @auth
+                                    <p>{{ Auth::user()->name }}</p>
+                                @endauth
                             </a>
                         </li>
                     </ul>
@@ -169,26 +150,6 @@
 
         <footer class="footer">
             <div class="container-fluid">
-                <nav class="pull-left">
-                    <ul>
-
-                        <li>
-                            <a href="#">
-                                Sammy
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Owusu
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Licenses
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
                 <div class="copyright pull-right">
                     &copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by <a href="#">Virtual Services</a>
                 </div>

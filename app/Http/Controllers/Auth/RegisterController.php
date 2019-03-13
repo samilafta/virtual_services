@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Category;
+use App\Customer;
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -69,4 +72,25 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    public function customerRegisterForm()
+    {
+        $categories = Category::all();
+        return view('auth.customer-register', compact('categories'));
+    }
+
+
+    protected function createCustomer(Request $request)
+    {
+        $this->validator($request->all())->validate();
+        $customer = Customer::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'phone_number' => $request['phone_number'],
+            'password' => Hash::make($request['password']),
+        ]);
+        return redirect()->intended(route('customer.register'))->with('success', 'Account successfully created.');
+    }
+
+
 }

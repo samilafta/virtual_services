@@ -19,7 +19,7 @@ class RedirectIfAuthenticated
     {
 
         if ($guard == "customer" && Auth::guard($guard)->check()) {
-            return redirect('/index');
+            return redirect('/');
         }
 
         if (Auth::guard($guard)->check()) {

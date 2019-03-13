@@ -31,22 +31,43 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
                     <div class="account-form form-style">
-                        <p>User Name or Email Address *</p>
-                        <input type="email">
-                        <p>Password *</p>
-                        <input type="Password">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <input id="password" type="checkbox">
-                                <label for="password">Save Password</label>
+                        <form action="{{ route('customer.login') }}" method="post">
+
+                            @csrf
+
+                            <p>Email Address *</p>
+                            <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                            <div class="invalid-feedback">
+                                Email is invalid
                             </div>
-                            <div class="col-lg-6 text-right">
-                                <a href="#">Forget Your Password?</a>
+                            @if ($errors->has('email'))
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                            @endif
+
+                            <p>Password *</p>
+                            <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required data-eye>
+                            <div class="invalid-feedback">
+                                Password is required
                             </div>
-                        </div>
-                        <button>SIGN IN</button>
+                            @if ($errors->has('password'))
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                            @endif
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                    <label for="password">Remember Me</label>
+                                </div>
+                            </div>
+                            <button type="submit">SIGN IN</button>
+
+
+                        </form>
                         <div class="text-center">
-                            <a href="account.html">Or Create an Account</a>
+                            <a href="{{ route('customer.register') }}">Or Create an Account</a>
                         </div>
                     </div>
                 </div>

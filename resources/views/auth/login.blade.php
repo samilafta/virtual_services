@@ -15,7 +15,7 @@
         <div class="row justify-content-md-center h-100">
             <div class="card-wrapper">
                 <div class="brand">
-                    <img src="{{ asset('admin/login/img/logo.jpg') }}" alt="logo">
+                    <img src="{{ asset('shop/assets/images/virtual.png') }}" alt="logo">
                 </div>
                 <div class="card fat">
                     <div class="card-body">
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div class="footer">
-                    Copyright &copy; 2019 &mdash; Virtual Services
+                    Copyright &copy; 2019 &mdash; <a href="{{ route('index') }}">Virtual Services</a>
                 </div>
             </div>
         </div>
