@@ -36,12 +36,25 @@
                                 <li class="col-xl-3 col-lg-4 col-sm-6 col-12">
                                     <div class="product-wrap">
                                         <div class="product-img">
-                                            <img src="{{ asset($product->image) }}" alt="">
+                                            <img src="{{ asset($product->image) }}" alt="" height="120px"/>
                                             <div class="product-icon flex-style">
                                                 <ul>
-                                                    <li><a data-toggle="modal" data-target="#exampleModalCenter" href="javascript:void(0);"><i class="fa fa-eye"></i></a></li>
+                                                    <li><a href="{{ route('shop.products') }}"><i class="fa fa-eye"></i></a></li>
                                                     {{--<li><a href="wishlist.html"><i class="fa fa-heart"></i></a></li>--}}
-                                                    <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li>
+                                                    <li>
+                                                        <form action="{{ route('shop.addtocart') }}" method="POST" class="side-by-side">
+                                                            @csrf
+                                                        <input type="hidden" name="id" value="{{ $product->id }}">
+                                                        <input type="hidden" name="name" value="{{ $product->name }}">
+                                                        <input type="hidden" name="price" value="{{ $product->price }}">
+                                                        <input type="hidden" name="quantity" value="1">
+
+                                                            <button type="submit"><i class="fa fa-shopping-bag"></i></button>
+
+                                                    </form>
+
+
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -66,3 +79,17 @@
     </div>
 
 @endsection
+
+
+
+
+
+{{--@foreach ($products->chunk(4) as $items)--}}
+    {{--<div class="row">--}}
+        {{--@foreach ($items as $product)--}}
+            {{--<div class="col-md-3">--}}
+                {{--// html to render a product--}}
+            {{--</div> <!-- end col-md-3 -->--}}
+        {{--@endforeach--}}
+    {{--</div> <!-- end row -->--}}
+{{--@endforeach--}}

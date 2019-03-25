@@ -50,10 +50,21 @@
                         </div>
                         <p>{!! $product->description !!}}</p>
                         <ul class="input-style">
-                            <li class="quantity cart-plus-minus">
-                                <input type="text" value="1" />
-                            </li>
-                            <li><a href="#">Add to Cart</a></li>
+                            <form action="{{ route('shop.addtocart') }}" method="POST" class="side-by-side">
+                                {!! csrf_field() !!}
+                                <li class="quantity cart-plus-minus">
+                                    <input type="text" name="quantity" value="1"/>
+                                </li>
+                                <li>
+
+                                    <input type="hidden" name="id" value="{{ $product->id }}">
+                                    <input type="hidden" name="name" value="{{ $product->name }}">
+                                    <input type="hidden" name="price" value="{{ $product->price }}">
+
+                                    <button type="submit" class="btn btn-warning">Add to Cart</button>
+
+                                </li>
+                            </form>
                         </ul>
                         <ul class="cetagory">
                             <li>Category:</li>

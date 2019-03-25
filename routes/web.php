@@ -54,16 +54,54 @@ Route::get('product/{id}' , [
     'as' => 'shop.product.detail'
 ]);
 
-Route::get('shop/products' , [
+Route::get('products' , [
     'uses' => 'ShopFrontController@productsDisplay',
-    'as' => 'shop.products.shop'
+    'as' => 'shop.products'
 ]);
 
 
 
 Route::group(['middleware' => ['auth:customer']], function() {
 
+    Route::get('cart' , [
+        'uses' => 'ShopFrontController@displayCart',
+        'as' => 'shop.cart'
+    ]);
 
+    Route::get('checkout' , [
+        'uses' => 'ShopFrontController@displayCheckout',
+        'as' => 'shop.checkout'
+    ]);
+
+    Route::post('addtocart' , [
+        'uses' => 'CartController@addToCart',
+        'as' => 'shop.addtocart'
+    ]);
+
+    Route::get('cart/empty' , [
+        'uses' => 'CartController@emptyCart',
+        'as' => 'shop.cart.empty'
+    ]);
+
+    Route::post('cart/remove/{id}' , [
+        'uses' => 'CartController@destroy',
+        'as' => 'shop.cart.remove'
+    ]);
+
+    Route::post('cart/qty/{id}' , [
+        'uses' => 'CartController@updateQty',
+        'as' => 'shop.cart.qty'
+    ]);
+
+    Route::post('checkout/order' , [
+        'uses' => 'CartController@checkout',
+        'as' => 'shop.checkout.order'
+    ]);
+
+    Route::get('orders/' , [
+        'uses' => 'ShopFrontController@displayOrders',
+        'as' => 'shop.orders'
+    ]);
 
 
 });

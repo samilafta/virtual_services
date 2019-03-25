@@ -148,7 +148,17 @@
                                         <ul>
                                             <li><a data-toggle="modal" data-target="#exampleModalCenter" href="javascript:void(0);"><i class="fa fa-eye"></i></a></li>
                                             {{--<li><a href="wishlist.html"><i class="fa fa-heart"></i></a></li>--}}
-                                            <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li>
+                                            <li>
+                                                <form action="{{ route('shop.addtocart') }}" method="POST" class="side-by-side">
+                                                    @csrf
+                                                    <input type="hidden" name="id" value="{{ $product->id }}">
+                                                    <input type="hidden" name="name" value="{{ $product->name }}">
+                                                    <input type="hidden" name="price" value="{{ $product->price }}">
+                                                    <input type="hidden" name="quantity" value="1">
+
+                                                    <button type="submit"><i class="fa fa-shopping-bag"></i></button>
+
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -540,35 +550,5 @@
         </div>
     </div>
     <!-- product-area end -->
-
-    <!-- subscribe-area start -->
-    <div class="subscribe-area">
-        <div class="subscribe-img d-none d-xl-block">
-            <img src="{{ asset('shop/assets/images/subscribe.png') }}" alt="">
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-5 offset-xl-1 col-md-6">
-                    <div class="subscribe-content">
-                        <h2>Subscribe to Newsletter</h2>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-6">
-                    <div class="subscribe-form">
-                        <form id="mc-form" class="sform">
-                            <div class="form_msg">
-                                <label class="mt10" for="mc-email"></label>
-                            </div>
-                            <input type="email" name="email" id="mc-email" placeholder="Enter Your Email" required>
-                            <input type="submit" name="submit" value="subscribe">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- subscribe-area end -->
-
 
 @endsection

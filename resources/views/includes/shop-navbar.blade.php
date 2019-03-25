@@ -77,7 +77,7 @@
                         <ul class="d-flex">
                             <li class="active"><a href="{{ route('index')}}">Home</a>
                             </li>
-                            <li><a href="{{ route('shop.products.shop') }}">Shop</a></li>
+                            <li><a href="{{ route('shop.products') }}">Shop</a></li>
                             <li><a href="javascript:void(0);">Categories <i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown_style">
                                     @foreach($categories as $category)
@@ -88,8 +88,8 @@
 
                                 </ul>
                             </li>
-                            @auth
-                                <li><a href="#">Orders</a></li>
+                            @auth("customer")
+                                <li><a href="{{ route('shop.orders') }}">Orders</a></li>
                             @endauth
 
                         </ul>
@@ -98,25 +98,9 @@
                 <div class="col-md-4 col-lg-2 col-sm-5 col-4">
                     <ul class="search-cart-wrapper d-flex">
                         {{--<li class="search-tigger"><a href="javascript:void(0);"><i class="fa fa-search"></i></a></li>--}}
-                        <li><a href="javascript:void(0);"><i class="fa fa-shopping-basket"></i> <span>3</span></a>
-                            {{--<ul class="cart-wrap dropdown_style">--}}
-                               {{----}}
-                                {{--<li class="cart-items">--}}
-                                    {{--<div class="cart-img">--}}
-                                        {{--<img src="{{ asset('shop/assets/images/cart/2.jpg') }}" alt="">--}}
-                                    {{--</div>--}}
-                                    {{--<div class="cart-content">--}}
-                                        {{--<a href="cart.html">Lovely Blue Dress</a>--}}
-                                        {{--<span>QTY : 1</span>--}}
-                                        {{--<p>$35.00</p>--}}
-                                        {{--<i class="fa fa-times"></i>--}}
-                                    {{--</div>--}}
-                                {{--</li>--}}
-                                {{--<li>Subtotal: <span class="pull-right">$70.00</span></li>--}}
-                                {{--<li>--}}
-                                    {{--<button>Check Out</button>--}}
-                                {{--</li>--}}
-                            {{--</ul>--}}
+                        <li><a href="{{ route('shop.cart') }}"><i class="fa fa-shopping-basket"></i>
+                                <span>{{ sizeof(Cart::instance(Session::get('cart_instance'))->content()) }}</span></a>
+
                         </li>
                     </ul>
                 </div>
@@ -132,50 +116,50 @@
             </div>
         </div>
         <!-- responsive-menu area start -->
-        <div class="responsive-menu-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 d-block d-lg-none">
-                        <ul class="metismenu">
-                            <li class="sidemenu-items"><a class="has-arrow" aria-expanded="false" href="javascript:void(0);">Home</a>
-                                <ul aria-expanded="false">
-                                    <li><a href="index.html">Home Mail</a></li>
-                                    <li><a href="index2.html">Home Two</a></li>
-                                    <li><a href="index3.html">Home Three</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="about.html">About</a></li>
-                            <li class="sidemenu-items"><a class="has-arrow" aria-expanded="false" href="javascript:void(0);">Shop </a>
-                                <ul aria-expanded="false">
-                                    <li><a href="shop.html">Shop Page</a></li>
-                                    <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
-                                    <li><a href="Single-product.html">Product Details</a></li>
-                                    <li><a href="cart.html">Shopping cart</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                </ul>
-                            </li>
-                            <li class="sidemenu-items"><a class="has-arrow" aria-expanded="false" href="javascript:void(0);">Pages </a>
-                                <ul aria-expanded="false">
-                                    <li><a href="about.html">About Page</a></li>
-                                    <li><a href="Single-product.html">Product Details</a></li>
-                                    <li><a href="cart.html">Shopping cart</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                </ul>
-                            </li>
-                            <li class="sidemenu-items"><a class="has-arrow" aria-expanded="false" href="javascript:void(0);">Blog</a>
-                                <ul aria-expanded="false">
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {{--<div class="responsive-menu-area">--}}
+            {{--<div class="container">--}}
+                {{--<div class="row">--}}
+                    {{--<div class="col-12 d-block d-lg-none">--}}
+                        {{--<ul class="metismenu">--}}
+                            {{--<li class="sidemenu-items"><a class="has-arrow" aria-expanded="false" href="javascript:void(0);">Home</a>--}}
+                                {{--<ul aria-expanded="false">--}}
+                                    {{--<li><a href="index.html">Home Mail</a></li>--}}
+                                    {{--<li><a href="index2.html">Home Two</a></li>--}}
+                                    {{--<li><a href="index3.html">Home Three</a></li>--}}
+                                {{--</ul>--}}
+                            {{--</li>--}}
+                            {{--<li><a href="about.html">About</a></li>--}}
+                            {{--<li class="sidemenu-items"><a class="has-arrow" aria-expanded="false" href="javascript:void(0);">Shop </a>--}}
+                                {{--<ul aria-expanded="false">--}}
+                                    {{--<li><a href="shop.html">Shop Page</a></li>--}}
+                                    {{--<li><a href="shop-sidebar.html">Shop Sidebar</a></li>--}}
+                                    {{--<li><a href="Single-product.html">Product Details</a></li>--}}
+                                    {{--<li><a href="cart.html">Shopping cart</a></li>--}}
+                                    {{--<li><a href="checkout.html">Checkout</a></li>--}}
+                                    {{--<li><a href="wishlist.html">Wishlist</a></li>--}}
+                                {{--</ul>--}}
+                            {{--</li>--}}
+                            {{--<li class="sidemenu-items"><a class="has-arrow" aria-expanded="false" href="javascript:void(0);">Pages </a>--}}
+                                {{--<ul aria-expanded="false">--}}
+                                    {{--<li><a href="about.html">About Page</a></li>--}}
+                                    {{--<li><a href="Single-product.html">Product Details</a></li>--}}
+                                    {{--<li><a href="cart.html">Shopping cart</a></li>--}}
+                                    {{--<li><a href="checkout.html">Checkout</a></li>--}}
+                                    {{--<li><a href="wishlist.html">Wishlist</a></li>--}}
+                                {{--</ul>--}}
+                            {{--</li>--}}
+                            {{--<li class="sidemenu-items"><a class="has-arrow" aria-expanded="false" href="javascript:void(0);">Blog</a>--}}
+                                {{--<ul aria-expanded="false">--}}
+                                    {{--<li><a href="blog.html">Blog</a></li>--}}
+                                    {{--<li><a href="blog-details.html">Blog Details</a></li>--}}
+                                {{--</ul>--}}
+                            {{--</li>--}}
+                            {{--<li><a href="contact.html">Contact</a></li>--}}
+                        {{--</ul>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
         <!-- responsive-menu area start -->
     </div>
 </header>

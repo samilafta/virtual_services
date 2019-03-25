@@ -22,7 +22,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'Peter Ayambire',
             'email' => 'peter@gmail.com',
             'phone_number' => '0547576916',
-            'password' => \Illuminate\Support\Facades\Hash::make('123456'),
+            'password' => \Illuminate\Support\Facades\Hash::make('12345678'),
 
         ]);
 

@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Order;
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class ShopFrontController extends Controller
 {
@@ -46,12 +49,37 @@ class ShopFrontController extends Controller
 
     public function productsDisplay() {
 
-        $products = Product::all()->paginate(16);
+        $products = Product::all();
         $categories = Category::all();
 
 //        dd($products->all());
 
         return view('shop.products', compact('products', 'categories'));
+
+    }
+
+    public function displayCart() {
+
+        $categories = Category::all();
+        return view('shop.cart', compact('categories'));
+
+    }
+
+    public function displayCheckout() {
+
+        $categories = Category::all();
+        return view('shop.checkout', compact('categories'));
+
+    }
+
+    public function displayOrders() {
+
+        $categories = Category::all();
+        $orders = Order::where('customer_id', Auth::guard('customer')->user()->id)->get();
+
+//        dd($orders->all());
+
+        return view('shop.orders', compact('categories', 'orders'));
 
     }
 

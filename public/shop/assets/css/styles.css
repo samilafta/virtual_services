@@ -1210,7 +1210,7 @@ a#scrollUp:hover {
     display: inline-block;
 }
 
-.product-img ul li a {
+.product-img ul li a, button {
     display: block;
     height: 35px;
     width: 35px;
@@ -1221,7 +1221,7 @@ a#scrollUp:hover {
     border-radius: 3px;
 }
 
-.product-img ul li a:hover {
+.product-img ul li a:hover, button:hover {
     background: #f50057;
     border-color: #f50057;
 }
