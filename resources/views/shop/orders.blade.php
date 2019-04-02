@@ -48,6 +48,7 @@
                             <tr>
                                 <th>Order Code</th>
                                 <th>Payment</th>
+                                <th>Payment Method</th>
                                 <th>Total (GHS)</th>
                                 <th class="quantity">Status</th>
                                 <th class="total">Action</th>
@@ -58,7 +59,7 @@
                             @foreach ($orders as $order)
 
                                 <tr>
-                                    <td>{{ $order->cart_id }}</td>
+                                    <td>{{ $order->order_code }}</td>
                                     <td>
                                         @if($order->payment_status == 0)
                                             Not Paid
@@ -67,7 +68,9 @@
                                         @endif
 
                                     </td>
+                                    <td>{{ $order->payment_method }}</td>
                                     <td>{{ $order->total_amount }}</td>
+
                                     <td class="quantity cart-plus">
                                         @if($order->status == 0)
                                             <label class="label label-warning">Not Delivered</label>
@@ -76,10 +79,10 @@
                                         @endif
                                     </td>
                                     <td>
-                                        <button class="btn btn-xs btn-primary">
-                                            <a data-toggle="modal" data-target="#viewItem{{ $order->cart_id }}" href="javascript:void(0);">
+                                        {{--<button class="btn btn-xs btn-primary">--}}
+                                            <a data-toggle="modal" class="btn btn-xs btn-primary" data-target="#viewItem{{ $order->cart_id }}">
                                                 <i class="fa fa-eye"></i> </a>
-                                        </button>
+
 
                                     </td>
                                 </tr>
@@ -102,36 +105,36 @@
 
 
     @foreach ($orders as $order)
-    <!-- Modal area start -->
-    <div class="modal fade" id="viewItem{{ $order->cart_id }}" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="modal-body d-flex">
+        <!-- Modal area start -->
+        <div class="modal fade" id="viewItem{{ $order->cart_id }}" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modal-body d-flex">
 
-                    <div class="col-lg-4">
-                        <div class="order-area">
-                            <h3>Your Order</h3>
-                            <ul class="total-cost">
-                                @foreach (Cart::instance($order->cart_id)->content() as $item)
-                                    <li>{{ $item->model->name }} <span class="pull-right">GHS {{ $item->model->price }}</span></li>
+                        <div class="col-md-offset-3 col-lg-4">
+                            <div class="order-area">
+                                <h3>Your Order</h3>
+                                <ul class="total-cost">
+                                    @foreach (Cart::instance($order->cart_id)->content() as $item)
+                                        <li>{{ $item->model->name }} ( {{ $item->qty }} ) <span class="pull-right">GHS {{ $item->model->price }}</span></li>
 
-                                @endforeach
-                                {{--<li>Subtotal <span class="pull-right"><strong>GHS {{ Cart::instance($order->cart_id)->subtotal() }}</strong></span></li>--}}
-                                <li>Shipping <span class="pull-right">Free</span></li>
-                                <li>Total<span class="pull-right">GHS {{ Cart::instance($order->cart_id)->subtotal() }}</span></li>
-                            </ul>
+                                    @endforeach
+                                    {{--<li>Subtotal <span class="pull-right"><strong>GHS {{ Cart::instance($order->cart_id)->subtotal() }}</strong></span></li>--}}
+                                    <li>Shipping <span class="pull-right">Free</span></li>
+                                    <li>Total<span class="pull-right">GHS {{ Cart::instance($order->cart_id)->subtotal() }}</span></li>
+                                </ul>
 
+                            </div>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Modal area start -->
+        <!-- Modal area start -->
 
     @endforeach
 

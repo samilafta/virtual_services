@@ -59,39 +59,42 @@ Route::get('products' , [
     'as' => 'shop.products'
 ]);
 
+Route::get('cart' , [
+    'uses' => 'ShopFrontController@displayCart',
+    'as' => 'shop.cart'
+]);
+
+Route::post('addtocart' , [
+    'uses' => 'CartController@addToCart',
+    'as' => 'shop.addtocart'
+]);
+
+Route::get('cart/empty' , [
+    'uses' => 'CartController@emptyCart',
+    'as' => 'shop.cart.empty'
+]);
+
+Route::post('cart/remove/{id}' , [
+    'uses' => 'CartController@destroy',
+    'as' => 'shop.cart.remove'
+]);
+
+Route::post('cart/qty/{id}' , [
+    'uses' => 'CartController@updateQty',
+    'as' => 'shop.cart.qty'
+]);
 
 
 Route::group(['middleware' => ['auth:customer']], function() {
 
-    Route::get('cart' , [
-        'uses' => 'ShopFrontController@displayCart',
-        'as' => 'shop.cart'
-    ]);
+
 
     Route::get('checkout' , [
         'uses' => 'ShopFrontController@displayCheckout',
         'as' => 'shop.checkout'
     ]);
 
-    Route::post('addtocart' , [
-        'uses' => 'CartController@addToCart',
-        'as' => 'shop.addtocart'
-    ]);
 
-    Route::get('cart/empty' , [
-        'uses' => 'CartController@emptyCart',
-        'as' => 'shop.cart.empty'
-    ]);
-
-    Route::post('cart/remove/{id}' , [
-        'uses' => 'CartController@destroy',
-        'as' => 'shop.cart.remove'
-    ]);
-
-    Route::post('cart/qty/{id}' , [
-        'uses' => 'CartController@updateQty',
-        'as' => 'shop.cart.qty'
-    ]);
 
     Route::post('checkout/order' , [
         'uses' => 'CartController@checkout',
@@ -128,10 +131,30 @@ Route::group(['middleware' => ['auth']], function() {
 
         Route::resource('customers', 'CustomersController');
 
-//        Route::post('/product/update/{id}', [
-//            'uses' => 'ProductsController@update',
-//            'as' => 'product.update'
-//        ]);
+        Route::get('/orders', [
+            'uses' => 'AdminController@orders',
+            'as' => 'orders.index'
+        ]);
+
+        Route::get('/orders/pay/{id}', [
+            'uses' => 'AdminController@orders_pay',
+            'as' => 'orders.pay'
+        ]);
+
+        Route::get('/orders/deliver/{id}', [
+            'uses' => 'AdminController@orders_deliver',
+            'as' => 'orders.deliver'
+        ]);
+
+        Route::get('/reports', [
+            'uses' => 'AdminController@reports',
+            'as' => 'reports'
+        ]);
+
+        Route::post('/reports/generate', [
+            'uses' => 'AdminController@generate_report',
+            'as' => 'reports.generate'
+        ]);
 
 
     });

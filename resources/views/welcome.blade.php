@@ -8,4 +8,4 @@
 @section('shop-content')
 
 
-    @endsection
+@endsection

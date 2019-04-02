@@ -75,7 +75,8 @@ class ShopFrontController extends Controller
     public function displayOrders() {
 
         $categories = Category::all();
-        $orders = Order::where('customer_id', Auth::guard('customer')->user()->id)->get();
+        $orders = Order::where('customer_id', Auth::guard('customer')->user()->id)
+            ->orderBy('created_at', 'desc')->get();
 
 //        dd($orders->all());
 

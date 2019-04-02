@@ -81,15 +81,19 @@
                             </ul>
                             <ul class="payment-method">
                                 <li>
-                                    <input id="delivery" type="checkbox" checked disabled="true">
-                                    <label for="delivery">Cash on Delivery</label>
+                                    <label><strong>Choose Payment Method:</strong></label><br/>
+                                    <input type="radio" name="p_method" value="cash"/> Cash on Delivery<br>
+                                    <input type="radio" name="p_method" value="momo"/> Mobile Money<br>
+                                    <small class="text-primary">Send payment to 0547576916, use the order code as reference.</small>
+                                    {{--<input id="delivery" type="checkbox" checked disabled="true">--}}
+                                    {{--<label for="delivery">Cash on Delivery</label>--}}
                                 </li>
                             </ul>
 
                             <input type="hidden" value="{{ Auth::guard('customer')->user()->id }}" name="customer_id" />
                             <input type="hidden" value="{{ Cart::instance(Session::get('cart_instance'))->subtotal() }}" name="total_amount" />
-                            <input type="hidden" name="lat" id="txtlat" required value="">
-                            <input type="hidden" name="long" id="txtlang" required value="">
+                            {{--<input type="hidden" name="lat" id="txtlat" required value="">--}}
+                            {{--<input type="hidden" name="long" id="txtlang" required value="">--}}
 
                             <button type="submit">Place Order</button>
 

@@ -68,7 +68,6 @@ class CartController extends Controller
 
     }
 
-
     public function destroy($id)
     {
         $session = Session::get('cart_instance');
@@ -87,23 +86,28 @@ class CartController extends Controller
 
         $this->validate($request, [
             'address' => 'required',
+            'p_method' => 'required'
         ]);
 
-        dd($request->all());
+//        dd($request->all());
 
         $session = Session::get('cart_instance');
 
-        Cart::instance($session)->store($session);
+//        dd($request->all());
 
         Order::create([
             'cart_id' => $session,
             'customer_id' => $request->customer_id,
+            'order_code' => $this->randomString(6),
             'total_amount' => $request->total_amount,
+            'payment_method' => $request->p_method,
             'address' => $request->address,
             'message' => $request->message,
             'payment_status' => 0,
             'status' => 0
         ]);
+
+        Cart::instance($session)->store($session);
 
         $hash = bin2hex(random_bytes(10));
         Session::put('cart_instance', $hash);
@@ -112,60 +116,18 @@ class CartController extends Controller
 
     }
 
+    public function randomString($length) {
+        $str = "";
+        $characters  = array_merge(range("A", "Z"), range("0", "9"));
+        $max = count($characters) - 1;
 
-//    public function addToCart($id) {
-//
-//        $product = Product::find($id);
-//
-//        if(!$product) {
-//
-//            abort(404);
-//
-//        }
-//
-//        $cart = session()->get('cart');
-//
-//        // if cart is empty then this the first product
-//        if(!$cart) {
-//
-//            $cart = [
-//                $id => [
-//                    "name" => $product->name,
-//                    "quantity" => 1,
-//                    "price" => $product->price,
-//                    "photo" => $product->photo
-//                ]
-//            ];
-//
-//            session()->put('cart', $cart);
-//
-//            return redirect()->back()->with('success', 'Product added to cart successfully!');
-//        }
-//
-//        // if cart not empty then check if this product exist then increment quantity
-//        if(isset($cart[$id])) {
-//
-//            $cart[$id]['quantity']++;
-//
-//            session()->put('cart', $cart);
-//
-//            return redirect()->back()->with('success', 'Product added to cart successfully!');
-//
-//        }
-//
-//        // if item not exist in cart then add to cart with quantity = 1
-//        $cart[$id] = [
-//            "name" => $product->name,
-//            "quantity" => 1,
-//            "price" => $product->price,
-//            "photo" => $product->photo
-//        ];
-//
-//        session()->put('cart', $cart);
-//
-//        return redirect()->back()->with('success', 'Product added to cart successfully!');
-//
-//
-//    }
+        for ($i = 0; $i < $length; $i++)  {
+            $rand = mt_rand(0, $max);
+            $str .= $characters[$rand];
+        }
+        return $str;
+    }
+
+
 
 }

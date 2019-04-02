@@ -37,24 +37,24 @@
 
                             <p>Email Address *</p>
                             <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
-                            <div class="invalid-feedback">
-                                Email is invalid
-                            </div>
+                            {{--<div class="invalid-feedback">--}}
+                                {{--Email is invalid--}}
+                            {{--</div>--}}
                             @if ($errors->has('email'))
                                 <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
+                                    <strong>{{ $errors->first('email') }}</strong>
+                                </span>
                             @endif
 
                             <p>Password *</p>
                             <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required data-eye>
-                            <div class="invalid-feedback">
-                                Password is required
-                            </div>
+                            {{--<div class="invalid-feedback">--}}
+                                {{--Password is required--}}
+                            {{--</div>--}}
                             @if ($errors->has('password'))
                                 <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
+                                    <strong>{{ $errors->first('password') }}</strong>
+                                </span>
                             @endif
                             <div class="row">
                                 <div class="col-lg-6">

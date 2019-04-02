@@ -17,7 +17,9 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->string('cart_id');
             $table->integer('customer_id');
-            $table->string('total_amount');
+            $table->string('order_code');
+            $table->decimal('total_amount', 10, 2);
+            $table->string('payment_method');
             $table->string('address');
             $table->text('message')->nullable();
             $table->integer('payment_status');

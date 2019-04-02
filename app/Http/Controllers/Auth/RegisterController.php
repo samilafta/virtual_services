@@ -73,13 +73,6 @@ class RegisterController extends Controller
         ]);
     }
 
-    public function customerRegisterForm()
-    {
-        $categories = Category::all();
-        return view('auth.customer-register', compact('categories'));
-    }
-
-
     protected function createCustomer(Request $request)
     {
         $this->validator($request->all())->validate();

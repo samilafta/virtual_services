@@ -34,6 +34,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
     <link href="{{ asset('admin/assets/css/themify-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/assets/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -55,13 +56,13 @@
 
             <ul class="nav">
                 <li class="@yield('active-da')">
-                    <a href="#">
+                    <a href="{{ route('home') }}">
                         <i class="ti-panel"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li class="@yield('active-or')">
-                    <a href="#">
+                    <a href="{{ route('orders.index') }}">
                         <i class="ti-user"></i>
                         <p>Orders</p>
                     </a>
@@ -91,7 +92,7 @@
                     </a>
                 </li>
                 <li class="@yield('active-re')">
-                    <a href="#">
+                    <a href="{{ route('reports') }}">
                         <i class="ti-map"></i>
                         <p>Reports</p>
                     </a>
@@ -164,6 +165,8 @@
 
 <!--   Core JS Files   -->
 <script src="{{ asset('admin/assets/js/jquery-1.10.2.js') }}" type="text/javascript"></script>
+<script src="{{ asset('admin/assets/js/moment.min.js') }}" type="text/javascript"></script>
+
 <script src="{{ asset('admin/assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
 
 <!--  Checkbox, Radio & Switch Plugins -->
@@ -183,6 +186,16 @@
 
 <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 <script src="{{ asset('admin/assets/js/demo.js') }}"></script>
+<script src="{{ asset('admin/assets/js/bootstrap-datetimepicker.min.js') }}"></script>
+
+<script type="text/javascript">
+
+    $("#datetime3, #datetime4").datetimepicker({
+        format: 'YYYY-MM-DD HH:mm:ss'
+    }).parent().css("position :relative");
+
+
+</script>
 
 {{--<script type="text/javascript">--}}
     {{--$(document).ready(function(){--}}
