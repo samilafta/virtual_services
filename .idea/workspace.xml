@@ -2,7 +2,523 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c10a9378-850b-4d13-a92c-eb7ecd79605f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/virtual-services.iml" afterPath="$PROJECT_DIR$/.idea/virtual-services.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_definitions/config.lsql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_definitions/definitions.dynamic.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_definitions/definitions.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_definitions/definitions.protocol.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_definitions/dump.lsql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_htaccess_mod_rewrite" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_language/de.client.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_language/de.server.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_language/en.client.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_language/en.server.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/functions.data.db.update.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/functions.external.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/functions.global.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/functions.index.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/functions.internal.build.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/functions.internal.man.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/functions.internal.optimize.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/functions.internal.process.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/functions.tracking.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/objects.analytics.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/objects.countries.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/objects.devices.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/objects.external.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/objects.global.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/objects.global.users.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/objects.internal.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/objects.languages.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/objects.ldap.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/objects.mail.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/objects.stats.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Loader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Header/HeaderName.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Header/HeaderValue.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Message.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Message/File.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Message/Interface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Part.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Part/File.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Part/Interface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Protocol/Abstract.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Protocol/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Protocol/Imap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Protocol/Pop3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Protocol/Smtp.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Protocol/Smtp/Auth/Crammd5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Protocol/Smtp/Auth/Login.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Protocol/Smtp/Auth/Plain.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Storage.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Storage/Abstract.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Storage/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Storage/Folder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Storage/Folder/Interface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Storage/Folder/Maildir.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Storage/Folder/Mbox.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Storage/Imap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Storage/Maildir.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Storage/Mbox.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Storage/Pop3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Storage/Writable/Interface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Storage/Writable/Maildir.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Transport/Abstract.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Transport/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Transport/File.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Transport/Sendmail.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mail/Transport/Smtp.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mime.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mime/Decode.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mime/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mime/Message.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Mime/Part.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Registry.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Abstract.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Alnum.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Alpha.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Barcode.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Between.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Callback.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Ccnum.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/CreditCard.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Date.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Db/Abstract.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Db/NoRecordExists.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Db/RecordExists.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Digits.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/EmailAddress.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/File/Count.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/File/Crc32.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/File/ExcludeExtension.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/File/ExcludeMimeType.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/File/Exists.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/File/Extension.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/File/FilesSize.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/File/Hash.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/File/ImageSize.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/File/IsCompressed.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/File/IsImage.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/File/Md5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/File/MimeType.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/File/NotExists.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/File/Sha1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/File/Size.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/File/Upload.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/File/WordCount.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Float.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/GreaterThan.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Hex.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Hostname.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Hostname/Biz.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Hostname/Cn.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Hostname/Com.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Hostname/Jp.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Iban.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Identical.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/InArray.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Int.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Interface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Ip.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Isbn.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Ldap/Dn.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/LessThan.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/NotEmpty.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/PostCode.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Regex.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Sitemap/Changefreq.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Sitemap/Lastmod.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Sitemap/Loc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/Sitemap/Priority.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/Validate/StringLength.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/Zend/license.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/c3/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/c3/c3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/c3/c3.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/d3/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/d3/d3-scale-chromatic.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/d3/d3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/daterangepicker/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/daterangepicker/daterangepicker.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/daterangepicker/jquery.daterangepicker.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/daterangepicker/moment-range/UNLICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/daterangepicker/moment-range/moment-range.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/daterangepicker/moment/moment-with-locales.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/geo/GeoLite2-City.mmdb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/geo/geoip2.phar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/html2text.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/konva/konva.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/mobde.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/pchart/GPLv3.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/pchart/class/pData.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/pchart/class/pDraw.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/pchart/class/pImage.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/pchart/fonts/arimo.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/pchart/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/pchart/palettes/autumn.color" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/pchart/palettes/blind.color" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/pchart/palettes/evening.color" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/pchart/palettes/kitchen.color" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/pchart/palettes/light.color" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/pchart/palettes/navy.color" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/pchart/palettes/shade.color" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/pchart/palettes/spring.color" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/pchart/palettes/summer.color" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/phpimap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/xlsx/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_lib/trdp/xlsx/xlsx.full.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/_log/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/analytics.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/api/v2/api.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/api/v2/documentation.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/api/v2/objects.apiv2.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/chat.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/email.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/extern.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/feedback.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/license.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/roboto-v18-latin-700.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/roboto-v18-latin-700.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/roboto-v18-latin-700.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/roboto-v18-latin-700.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/roboto-v18-latin-700.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/roboto-v18-latin-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/roboto-v18-latin-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/roboto-v18-latin-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/roboto-v18-latin-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/roboto-v18-latin-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/fonts/roboto-v18-ml.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/geo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/getfile.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/image.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/avatar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/avatar_group.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/buttons/inlay_1_0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/buttons/inlay_1_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/buttons/inlay_2_0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/buttons/inlay_2_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/buttons/overlay_4_0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/buttons/overlay_4_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/carrier_header.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/carrier_logo.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/carrier_logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/geo/default/map.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/geo/default/map_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/geo/default/map_3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/geo/default/map_4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/geo/default/shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/geo/default/visitor.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/geo/default/visitor_chat.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/geo/default/visitor_selected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/geo/default/visitor_selected_chat.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/icon_file_upload_error.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/icon_file_upload_success.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/livezilla.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/lz_com_chat_spacer.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/lz_header.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/lz_topbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/preview_bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/smilies/cool.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/smilies/cry.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/smilies/lol.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/smilies/neutral.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/smilies/question.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/smilies/sad.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/smilies/shocked.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/smilies/sick.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/smilies/sleep.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/smilies/smile.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/smilies/tongue.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/images/smilies/wink.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/install/install.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/install/installer_o1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/install/installer_o1_thumb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/install/installer_o2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/install/installer_o2_thumb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/intern.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/knowledgebase.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/language.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/license_de.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/license_en.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/livezilla.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/log.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/map.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/chat.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/configure.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/css/livezilla6.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/css/livezilla6App.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/css/livezilla6Configure.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/css/livezilla6Login.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/css/livezilla6TemplateAndServer.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/img/icon192.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/img/icon512.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/img/icon512notify.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/img/login_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/img/lz_away.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/img/lz_busy.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/img/lz_offline.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/img/lz_online.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/basesf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/jquery-2.1.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/jquery-migrate-1.2.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/jquery.blockUI.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/jquery.blockUI.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/jsglobal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/jsglobal.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/admin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/chat.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/AdminDisplayLayoutClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/AdminPollServerClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/AdminUserManagementClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/ChatArchiveClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/ChatCountries.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/ChatDisplayClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/ChatDisplayHelperClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/ChatEditorClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/ChatForwardInviteClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/ChatGeotrackingMapClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/ChatObjectClasses.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/ChatPollServerClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/ChatReportsClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/ChatServerEvaluationClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/ChatSettingsClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/ChatStartpageClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/ChatTicketClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/ChatTranslationEditorClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/ChatUIClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/ChatUserActionsClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/ChatVisitorClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/CommonConfigClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/CommonDeviceInterfaceClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/CommonDeviceInterfaceManager.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/CommonDialogClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/CommonDisplayClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/CommonDisplayHelperClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/CommonDisplayLayoutClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/CommonInputControlsClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/CommonPermissionClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/CommonServerEvaluationClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/CommonStorageClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/CommonToolsClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/CommonTranslationClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/CommonWindowsDeviceInterfaceClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/ContextMenuClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/DataExportGeneratorClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/DesktopDeviceInterfaceClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/EventConfigurationClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/FeedbacksViewerClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/FilterConfigurationClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/KnowledgebaseUIClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/LinkGeneratorClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/ServerConfigurationClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/classes/UIRendererClass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/configure.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/lzm/translationData.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/md5.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/md5.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/sha1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/sha1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/sha256.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/sha256.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/utf8.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/wyzz/license.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/wyzz/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/wyzz/style.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/wyzz/wyzz.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/js/wyzz/wyzz.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/logout.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/lzm.appcache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/manifest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/php/common/flag.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/php/common/functions.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/php/common/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/php/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/sw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/templates/adminuser.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/templates/header.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/templates/langFile.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/templates/messageadd.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/templates/messageaddalt.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/templates/messageexternal.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/templates/messageinternal.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/templates/messagerepost.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/mobile/um.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/picture.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/preview.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/print.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/report.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/resource.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/script.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/server.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/sound/message.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/sound/queue.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/sound/ringtone.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/sound/s10_ed.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/sound/s11_lcs.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/sound/s12_02.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/sound/s1_has.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/sound/s2_cc.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/sound/s3_sb.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/sound/s4_fyi.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/sound/s5_c.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/sound/s6_a.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/sound/s7_p.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/sound/s8_yhnm.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/sound/s9_a.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/sound/visitor.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/sound/wind.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/stats/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ahgzixd7/analytics.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ahgzixd7/icons.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ahgzixd7/icons.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ahgzixd7/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ahgzixd7/index.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ahgzixd7/jsbox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ahgzixd7/jsbox.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ahgzixd7/jsboxv2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ahgzixd7/jsboxv2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ahgzixd7/jsconnector.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ahgzixd7/jsglobal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ahgzixd7/jsglobal.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ahgzixd7/jstrack.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ahgzixd7/jstrack.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ahgzixd7/jstrack.mob.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ahgzixd7/jstrack.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ahgzixd7/kb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ahgzixd7/kb.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ahgzixd7/lalo.license.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/alert.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/analytics.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/capture.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/chat_v2.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/config.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/default.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/feedback.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/feedback_type_0.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/feedback_type_1.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/index.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/kb_entry_footer.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/kb_entry_v2.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/kb_footer.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/kb_header.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/kb_main.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/kb_popular.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/kb_related.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/kb_result_category_v2.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/kb_result_link_v2.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/kb_result_main.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/kb_result_text_v2.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/login_area.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/login_check.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/login_combo.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/login_file_link.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/login_group.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/login_input.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/map.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/messageadd.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/messageaddalt.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/messageexternal.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/messageinternal.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/messagesystem.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/overlays/chat_ahgzixd7/chat.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/overlays/chat_ahgzixd7/eyecatcher_bubble.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/overlays/chat_ahgzixd7/eyecatcher_image.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/overlays/chat_ahgzixd7/jsextern.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/overlays/chat_ahgzixd7/jsextern.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/overlays/chat_ahgzixd7/jsextern.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/overlays/chat_ahgzixd7/kb_match_info.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/overlays/chat_ahgzixd7/login_check.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/overlays/chat_ahgzixd7/login_group.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/overlays/chat_ahgzixd7/messageexternal.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/overlays/chat_ahgzixd7/messageexternaladd.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/overlays/chat_ahgzixd7/messageinvite.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/overlays/chat_ahgzixd7/messageoperator.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/overlays/chat_ahgzixd7/messageoperatoradd.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/overlays/chat_ahgzixd7/messagepicture.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/overlays/chat_ahgzixd7/messagestatus.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/overlays/chat_ahgzixd7/ovl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/overlays/chat_ahgzixd7/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/overlays/chat_ahgzixd7/style.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/overlays/chat_ahgzixd7/wm.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/print.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ratebox.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/stats_base.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/stats_base_row.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/stats_base_table.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/stats_body.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/stats_days.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/stats_groups.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/stats_hours.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/stats_hours_hidden_row.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/stats_months.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/stats_operators.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/stats_span_row.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/stats_span_table.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/stats_top_row.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/stats_top_row_inner.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/stats_top_table.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/stats_top_table_inner.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/stats_top_url_table.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/stats_users_body.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/stats_users_url.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/stats_users_user.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/style.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/style_analytics.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/style_chat.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/style_chat.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/style_fb.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/style_fb.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/style_index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/style_index.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/style_kb.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/style_kb.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/style_ticket.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/style_ticket.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/support.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/ticket.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/templates/vcard.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/ticket.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/track.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/upload.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/validate.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/livezilla/visitcard.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/shop/about.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/shop/account.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/shop/blog-details.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/shop/blog.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/shop/cart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/shop/checkout.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/shop/contact.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/shop/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/shop/index2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/shop/index3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/shop/login.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/shop/shop-sidebar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/shop/shop.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/shop/single-product.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/shop/wishlist.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/shop/assets/images/virtual.png" afterPath="$PROJECT_DIR$/public/shop/assets/images/virtual.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/shop/assets/images/virtual2.png" afterPath="$PROJECT_DIR$/public/shop/assets/images/virtual2.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,7 +533,7 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2465">
+            <state relative-caret-position="0">
               <caret line="154" column="54" lean-forward="false" selection-start-line="154" selection-start-column="54" selection-end-line="154" selection-end-column="54" />
               <folding />
             </state>
@@ -139,7 +655,7 @@
   </component>
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -175,27 +691,28 @@
             <path>
               <item name="virtual-services" type="b2602c69:ProjectViewProjectNode" />
               <item name="virtual-services" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="virtual-services" type="b2602c69:ProjectViewProjectNode" />
               <item name="virtual-services" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="shop" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="virtual-services" type="b2602c69:ProjectViewProjectNode" />
               <item name="virtual-services" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="virtual-services" type="b2602c69:ProjectViewProjectNode" />
               <item name="virtual-services" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -211,9 +728,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projects\school-projects\virtual-services\public\shop\assets\images" />
       <recent name="C:\Projects\school-projects\virtual-services\public\admin\assets\js" />
       <recent name="C:\Projects\school-projects\virtual-services\public\admin\assets\css" />
-      <recent name="C:\Projects\school-projects\virtual-services\public\shop\assets\images" />
       <recent name="C:\Projects\school-projects\virtual-services\public\uploads\products" />
       <recent name="C:\Projects\school-projects\virtual-services\public\uploads\categories" />
     </key>
@@ -252,26 +769,28 @@
       <workItem from="1554131201880" duration="18268000" />
       <workItem from="1554205863741" duration="771000" />
       <workItem from="1554712271489" duration="623000" />
-      <workItem from="1554789922273" duration="64000" />
+      <workItem from="1554789922273" duration="633000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170828000" />
+    <option name="totallyTimeSpent" value="171397000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20424597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20424597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -279,7 +798,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -294,20 +812,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/seeds/UsersTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/CategoriesTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -569,7 +1073,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2465">
+        <state relative-caret-position="0">
           <caret line="154" column="54" lean-forward="false" selection-start-line="154" selection-start-column="54" selection-end-line="154" selection-end-column="54" />
           <folding />
         </state>
@@ -651,6 +1155,16 @@
           <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/shop/assets/images/virtual.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/shop/assets/images/virtual2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/shop-footer.blade.php">
