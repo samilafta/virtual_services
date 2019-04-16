@@ -10,7 +10,7 @@
     @parent
 @stop
 
-@section('active-pr')
+@section('active-cu')
     active
     @parent
 @stop

@@ -21,7 +21,6 @@ class ShopFrontController extends Controller
             ->with('third_cat', Category::orderBy('created_at', 'desc')->skip(2)->take(1)->get()->first())
             ->with('fourth_cat', Category::orderBy('created_at', 'desc')->skip(3)->take(1)->get()->first())
             ->with('fifth_cat', Category::orderBy('created_at', 'desc')->skip(4)->take(1)->get()->first())
-
             ->with('products', Product::take(8)->get());
 
     }

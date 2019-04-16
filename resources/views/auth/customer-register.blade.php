@@ -9,7 +9,7 @@
 
 
     <!-- .breadcumb-area start -->
-    <div class="breadcumb-area bg-img-4 ptb-100">
+    <div class="breadcumb-area bg-img-5 ptb-100">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -29,15 +29,6 @@
     <div class="account-area ptb-100">
         <div class="container">
 
-            {{--<div class="row">--}}
-                {{--@if ($message = Session::get('success'))--}}
-                    {{--<div class="alert alert-success alert-block">--}}
-                        {{--<button type="button" class="close" data-dismiss="alert">×</button>--}}
-                        {{--<strong>{{ $message }}</strong>--}}
-                        {{--<a href="{{ route('auth.customer.login') }}"> Please Login</a>--}}
-                    {{--</div>--}}
-                {{--@endif--}}
-            {{--</div>--}}
             <div class="row">
 
                 <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
@@ -45,7 +36,7 @@
 
                         @if ($message = Session::get('success'))
                             <div class="alert alert-success alert-block text-center">
-                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                {{--<button type="button" class="close" data-dismiss="alert">×</button>--}}
                                 <strong>{{ $message }}</strong>
                                 <a href="{{ route('auth.customer.login') }}"> Please Login</a>
                             </div>

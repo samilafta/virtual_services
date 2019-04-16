@@ -30,8 +30,8 @@
             <div class="row">
                 <div class="col-md-6 col-12">
                     <ul class="d-flex header-contact">
-                        <li><i class="fa fa-phone"></i> +233 0547 57 6916</li>
-                        <li><a href="{{ route('login') }}" style="color: #ffffff;"> <i class="fa fa-envelope"></i></a> virtualservices@gmail.com</li>
+                        <li><i class="fa fa-phone"></i> +233 0240 731 851</li>
+                        <li><a href="{{ route('login') }}" style="color: #ffffff;"> <i class="fa fa-envelope"></i></a> dexcel.media16@gmail.com</li>
                     </ul>
                 </div>
                 <div class="col-md-6 col-12">

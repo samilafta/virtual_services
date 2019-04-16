@@ -125,6 +125,8 @@
 
                                             <tr>
                                                 <td>{{ $item->model->name }}</td>
+                                                <td>{{ $item->qty }}</td>
+                                                <td>{{ $item->subtotal }}</td>
                                             </tr>
 
                                         @endforeach

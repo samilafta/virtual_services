@@ -4,10 +4,13 @@
     <div class="footer-top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-sm-6 col-12">
+                <div class="col-lg-4 col-sm-6 col-12">
                     <div class="footer-widget footer-logo">
                         <img src="{{ asset('shop/assets/images/virtual2.png') }}" alt="">
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from</p>
+                        <p>
+                            Dexcel Media Solutions seeks to offer solutions to IT services using the Virtual IT Service portal.
+                            Giving customers the advantages of online shopping and prioritising their needs and demands.
+                        </p>
                         <ul class="socil-icon d-flex">
                             <li><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
@@ -17,41 +20,18 @@
                         </ul>
                     </div>
                 </div>
-                {{--<div class="col-lg-3 col-sm-6 col-12">--}}
-                    {{--<div class="footer-widget footer-menu">--}}
-                        {{--<h2>Spacial Menu</h2>--}}
-                        {{--<ul>--}}
-                            {{--<li><a href="account.html">My Account</a></li>--}}
-                            {{--<li><a href="checkout.html">Checkout</a></li>--}}
-                            {{--<li><a href="javascript:void(0)">Help</a></li>--}}
-                            {{--<li><a href="javascript:void(0)">Support</a></li>--}}
-                            {{--<li><a href="javascript:void(0)">FAQ</a></li>--}}
-                        {{--</ul>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                <div class="col-lg-3 col-sm-6 col-12">
+
+                <div class="col-lg-4 col-sm-6 col-12">
                     <div class="footer-widget footer-contact">
                         <h2>Contact us</h2>
                         <ul>
                             <li><i class="fa fa-map-marker"></i>House No. 09 , Ashale Botwe </li>
-                            <li><i class="fa fa-phone"></i>+233 0245 65 7852 <span>+233 0547 57 6916</span> </li>
-                            <li><i class="fa fa-envelope-o"></i>virtualservices@gmail.com</li>
+                            <li><i class="fa fa-phone"></i>+233 0240 731 851 <span>+233 0557 950 967</span> </li>
+                            <li><i class="fa fa-envelope-o"></i>dexcel.media16@gmail.com</li>
                         </ul>
                     </div>
                 </div>
-                {{--<div class="col-lg-3 col-sm-6 col-12">--}}
-                    {{--<div class="footer-widget instagram">--}}
-                        {{--<h2>Join to Newsletter</h2>--}}
-                        {{--<ul class="d-flex">--}}
-                            {{--<li><a href="#"><img src="{{ asset('shop/assets/images/instragram/1.jpg') }}" alt=""></a></li>--}}
-                            {{--<li><a href="#"><img src="{{ asset('shop/assets/images/instragram/2.jpg') }}" alt=""></a></li>--}}
-                            {{--<li><a href="#"><img src="{{ asset('shop/assets/images/instragram/3.jpg') }}" alt=""></a></li>--}}
-                            {{--<li><a href="#"><img src="{{ asset('shop/assets/images/instragram/4.jpg') }}" alt=""></a></li>--}}
-                            {{--<li><a href="#"><img src="{{ asset('shop/assets/images/instragram/5.jpg') }}" alt=""></a></li>--}}
-                            {{--<li><a href="#"><img src="{{ asset('shop/assets/images/instragram/6.jpg') }}" alt=""></a></li>--}}
-                        {{--</ul>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
+
             </div>
         </div>
     </div>
@@ -59,7 +39,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-12">
-                    <p>&copy;2019 Virtual Services All Right Reserved</p>
+                    <p>&copy;2019 Virtual IT Service All Right Reserved</p>
                 </div>
                 <div class="col-md-6 col-12">
                     <ul class="d-flex">

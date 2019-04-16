@@ -8,64 +8,65 @@
 @section('shop-content')
 
     <!-- slider-area start -->
-    <div class="slider-area">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="slide-inner slide-inner1">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-8 col-lg-9 col-12">
-                                    <div class="slider-content">
-                                        <h2 data-swiper-parallax="-500">New Amazing Collection <span>2018</span></h2>
-                                        <p data-swiper-parallax="-400">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin</p>
-                                        <a href="shop.html" data-swiper-parallax="-300">Shop Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slide-inner slide-inner2">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-8 col-lg-9 col-12">
-                                    <div class="slider-content">
-                                        <h2 data-swiper-parallax="-500">New Amazing Collection <span>2018</span></h2>
-                                        <p data-swiper-parallax="-400">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin</p>
-                                        <a href="shop.html" data-swiper-parallax="-300">Shop Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slide-inner slide-inner3">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-8 col-lg-9 col-12">
-                                    <div class="slider-content">
-                                        <h2 data-swiper-parallax="-500">New Amazing Collection <span>2018</span></h2>
-                                        <p data-swiper-parallax="-400">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin</p>
-                                        <a href="shop.html" data-swiper-parallax="-300">Shop Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </div>
+    {{--<div class="slider-area">--}}
+        {{--<div class="swiper-container">--}}
+            {{--<div class="swiper-wrapper">--}}
+                {{--<div class="swiper-slide">--}}
+                    {{--<div class="slide-inner slide-inner1">--}}
+                        {{--<div class="container">--}}
+                            {{--<div class="row">--}}
+                                {{--<div class="col-xl-8 col-lg-9 col-12">--}}
+                                    {{--<div class="slider-content">--}}
+                                        {{--<h2 data-swiper-parallax="-500">New Amazing Collection <span>2018</span></h2>--}}
+                                        {{--<p data-swiper-parallax="-400">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin</p>--}}
+                                        {{--<a href="shop.html" data-swiper-parallax="-300">Shop Now</a>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="swiper-slide">--}}
+                    {{--<div class="slide-inner slide-inner2">--}}
+                        {{--<div class="container">--}}
+                            {{--<div class="row">--}}
+                                {{--<div class="col-xl-8 col-lg-9 col-12">--}}
+                                    {{--<div class="slider-content">--}}
+                                        {{--<h2 data-swiper-parallax="-500">New Amazing Collection <span>2018</span></h2>--}}
+                                        {{--<p data-swiper-parallax="-400">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin</p>--}}
+                                        {{--<a href="shop.html" data-swiper-parallax="-300">Shop Now</a>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="swiper-slide">--}}
+                    {{--<div class="slide-inner slide-inner3">--}}
+                        {{--<div class="container">--}}
+                            {{--<div class="row">--}}
+                                {{--<div class="col-xl-8 col-lg-9 col-12">--}}
+                                    {{--<div class="slider-content">--}}
+                                        {{--<h2 data-swiper-parallax="-500">New Amazing Collection <span>2018</span></h2>--}}
+                                        {{--<p data-swiper-parallax="-400">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin</p>--}}
+                                        {{--<a href="shop.html" data-swiper-parallax="-300">Shop Now</a>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="swiper-pagination"></div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
     <!-- slider-area end -->
     <!-- featured-area start -->
     <div class="featured-area">
         <div class="container">
-            <div class="row grid ">
-                <div class="col-lg-4 items col-md-6 col-12">
+            <div class="row grid">
+
+                <div class="col-lg-6 items col-md-6">
                     <div class="featured-wrap">
                         <div class="featured-img">
                             <img src="{{ asset($first_cat->image) }}" alt="">
@@ -76,7 +77,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8 items col-md-6 col-12">
+                <div class="col-lg-6 items col-md-6">
                     <div class="featured-wrap">
                         <div class="featured-img">
                             <img src="{{ asset($second_cat->image) }}" alt="">
@@ -87,10 +88,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 items col-md-6 col-12">
+
+            </div>
+            <div class="row grid">
+                <div class="col-lg-4 items col-md-4">
                     <div class="featured-wrap">
                         <div class="featured-img">
-                            <img src="{{ asset($third_cat->image) }}" alt="">
+                            <img src="{{ asset($third_cat->image) }}" style="height: 250px;" alt="">
                         </div>
                         <div class="featured-content">
                             <h2>{{ $third_cat->name }}</h2>
@@ -98,10 +102,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 items col-md-6 col-12">
+
+                <div class="col-lg-4 items col-md-4">
                     <div class="featured-wrap">
                         <div class="featured-img">
-                            <img src="{{ asset($fourth_cat->image) }}" alt="">
+                            <img src="{{ asset($fourth_cat->image) }}" style="height: 250px;" alt="">
                         </div>
                         <div class="featured-content">
                             <h2>{{ $fourth_cat->name }}</h2>
@@ -109,10 +114,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 items col-md-6 col-12">
+
+                <div class="col-lg-4 items col-md-4">
                     <div class="featured-wrap">
                         <div class="featured-img">
-                            <img src="{{ asset($fifth_cat->image) }}" alt="">
+                            <img src="{{ asset($fifth_cat->image) }}" style="height: 250px;" alt="">
                         </div>
                         <div class="featured-content">
                             <h2>{{ $fifth_cat->name }}</h2>
