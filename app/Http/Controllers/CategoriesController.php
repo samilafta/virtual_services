@@ -153,7 +153,7 @@ class CategoriesController extends Controller
 
 //        notify()->success('You successfully deleted the category');
 
-        return redirect()->route('categories');
+        return redirect()->route('categories.index');
 
     }
 }

@@ -104,7 +104,9 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="myModalLabel">Your Order: {{ $order->order_code }}</h4>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body" id="receipt">
+
+                        <p><strong>Virtual IT Service</strong></p>
 
                         <p><strong>Date: </strong>{{ $order->created_at }}</p>
                         <p><strong>Order Code: </strong>{{ $order->order_code }}</p>
@@ -121,39 +123,32 @@
                                         <th>Amount (GHS)</th>
                                     </thead>
                                     <tbody>
-                                        @foreach (Cart::instance($order->cart_id)->content() as $item)
+                                        @foreach (\App\Cart::where('cart_id', '=', $order->cart_id)->get() as $item)
 
                                             <tr>
-                                                <td>{{ $item->model->name }}</td>
-                                                <td>{{ $item->qty }}</td>
-                                                <td>{{ $item->subtotal }}</td>
+                                                <td>{{ $item->product_name }}</td>
+                                                <td>{{ $item->quantity }}</td>
+                                                <td>{{ $item->amount }}</td>
                                             </tr>
 
                                         @endforeach
-                                        {{--@foreach (Cart::instance($order->cart_id)->content() as $item)--}}
-
-                                            {{--<tr>--}}
-                                                {{--<td>{{ $item->model->name }}</td>--}}
-                                                {{--<td>{{ $item->qty }}</td>--}}
-                                                {{--<td>{{ $item->subtotal }}</td>--}}
-                                            {{--</tr>--}}
-
-                                        {{--@endforeach--}}
-
-                                        {{--<tr>TOTAL: GHS {{ Cart::instance($order->cart_id)->subtotal() }}</tr>--}}
 
                                     </tbody>
+                                    <tr><strong>TOTAL: </strong>GHS {{ \App\Cart::where('cart_id', '=', $order->cart_id)->sum('amount') }}</tr>
 
                                 </table>
-                            {{--</div>--}}
+                         {{--</div>--}}
 
-                        {{--</div>--}}
+                        </div>
 
                     </div>
-                    {{--<div class="modal-footer">--}}
-                        {{--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>--}}
-                        {{--<button type="button" class="btn btn-primary">Save changes</button>--}}
-                    {{--</div>--}}
+
+
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary text-center" id="print">Print</button>
+
+                    </div>
                 </div>
             </div>
         </div>

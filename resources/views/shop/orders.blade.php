@@ -30,17 +30,7 @@
             <div class="row">
                 <div class="col-12">
 
-                    @if (session()->has('success_message'))
-                        <div class="alert alert-success">
-                            {{ session()->get('success_message') }}
-                        </div>
-                    @endif
-
-                    @if (session()->has('error_message'))
-                        <div class="alert alert-danger">
-                            {{ session()->get('error_message') }}
-                        </div>
-                    @endif
+                        <h3 class="text-primary">Send payment to 0547576916 (MOMO), use the order code as reference.</h3>
 
                     @if ($orders->count() > 0)
                         <table class="table-responsive cart-wrap">
@@ -118,13 +108,20 @@
                             <div class="order-area">
                                 <h3>Your Order</h3>
                                 <ul class="total-cost">
-                                    @foreach (Cart::instance($order->cart_id)->content() as $item)
-                                        <li>{{ $item->model->name }} ( {{ $item->qty }} ) <span class="pull-right">GHS {{ $item->model->price }}</span></li>
+
+                                    {{--{{  $carts = \App\Cart::where('cart_id', '=', $order->cart_id)->get() }}--}}
+                                    {{--{{ dd($carts) }}--}}
+                                    @foreach (\App\Cart::where('cart_id', '=', $order->cart_id)->get() as $item)
+                                        <li>{{ $item->product_name }} ( {{ $item->quantity }} ) <span class="pull-right">GHS {{ $item->amount }}</span></li>
 
                                     @endforeach
+                                    {{--@foreach (Cart::instance($order->cart_id)->content() as $item)--}}
+                                        {{--<li>{{ $item->model->name }} ( {{ $item->qty }} ) <span class="pull-right">GHS {{ $item->model->price }}</span></li>--}}
+
+                                    {{--@endforeach--}}
                                     {{--<li>Subtotal <span class="pull-right"><strong>GHS {{ Cart::instance($order->cart_id)->subtotal() }}</strong></span></li>--}}
                                     <li>Shipping <span class="pull-right">Free</span></li>
-                                    <li>Total<span class="pull-right">GHS {{ Cart::instance($order->cart_id)->subtotal() }}</span></li>
+                                    <li>Total<span class="pull-right">GHS {{ \App\Cart::where('cart_id', '=', $order->cart_id)->sum('amount') }}</span></li>
                                 </ul>
 
                             </div>

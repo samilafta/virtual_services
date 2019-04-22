@@ -49,13 +49,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>From Date</label>
-                                    <input type="text" class="form-control border-input" name="from_date" id="datetime3" required>
+                                    <input type="text" class="form-control border-input" name="from_date" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>To Date</label>
-                                    <input type="text" class="form-control border-input" name="to_date" id="datetime4" required>
+                                    <input type="text" class="form-control border-input" name="to_date" required>
                                 </div>
                             </div>
                         </div>

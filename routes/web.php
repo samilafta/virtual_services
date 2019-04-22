@@ -59,6 +59,11 @@ Route::get('products' , [
     'as' => 'shop.products'
 ]);
 
+Route::get('search/' , [
+    'uses' => 'ShopFrontController@search',
+    'as' => 'shop.search'
+]);
+
 Route::get('cart' , [
     'uses' => 'ShopFrontController@displayCart',
     'as' => 'shop.cart'
@@ -93,8 +98,6 @@ Route::group(['middleware' => ['auth:customer']], function() {
         'uses' => 'ShopFrontController@displayCheckout',
         'as' => 'shop.checkout'
     ]);
-
-
 
     Route::post('checkout/order' , [
         'uses' => 'CartController@checkout',
@@ -134,6 +137,11 @@ Route::group(['middleware' => ['auth']], function() {
         Route::get('/orders', [
             'uses' => 'AdminController@orders',
             'as' => 'orders.index'
+        ]);
+
+        Route::get('/orders/{id}', [
+            'uses' => 'AdminController@show_order',
+            'as' => 'orders.show'
         ]);
 
         Route::get('/orders/pay/{id}', [

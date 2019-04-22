@@ -11,5 +11,9 @@ class Order extends Model
         'payment_method', 'address', 'message', 'payment_status', 'status'];
 
 
+    public function cart()
+    {
+        return $this->hasOne(Cart::class, 'cart_id');
+    }
 
 }

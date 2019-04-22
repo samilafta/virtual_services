@@ -35,6 +35,9 @@
     <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
     <link href="{{ asset('admin/assets/css/themify-icons.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/assets/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/assets/css/normalize.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/assets/css/skeleton.min.css') }}" rel="stylesheet">
+
 
 </head>
 <body>
@@ -187,6 +190,7 @@
 <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 <script src="{{ asset('admin/assets/js/demo.js') }}"></script>
 <script src="{{ asset('admin/assets/js/bootstrap-datetimepicker.min.js') }}"></script>
+<script src="{{ asset('admin/assets/js/printThis.js') }}"></script>
 
 <script type="text/javascript">
 
@@ -194,6 +198,11 @@
         format: 'YYYY-MM-DD HH:mm:ss'
     }).parent().css("position :relative");
 
+    $('#print').on("click", function () {
+        $('#receipt').printThis({
+            base: "https://jasonday.github.io/printThis/"
+        });
+    });
 
 </script>
 

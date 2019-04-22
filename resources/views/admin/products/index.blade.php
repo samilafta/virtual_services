@@ -55,36 +55,6 @@
                                     </td>
                                 </tr>
 
-                                <!-- Modal for showing delete confirmation -->
-                                <div class="modal fade" id="delete_confirm{{ $product->id }}" tabindex="-1" role="dialog" aria-labelledby="user_delete_confirm_title" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">[close]</button>
-                                                <h4 class="modal-title" id="user_delete_confirm_title">
-                                                    Delete Product: {{ $product->name }}
-                                                </h4>
-                                            </div>
-                                            <div class="modal-body">
-                                                Are you sure to delete this Category? This operation is irreversible.
-                                                <div class="row">
-                                                    {{--<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>--}}
-                                                    <form action="{{ route('products.destroy', ['product' => $product->id]) }}" method="post">
-
-                                                        @csrf
-                                                        {{ @method_field('DELETE') }}
-
-                                                        <button type="submit" class="btn btn-danger pull-right">Delete</button>
-
-                                                    </form>
-
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
 
                             @endforeach
 
@@ -101,6 +71,39 @@
             </div>
         </div>
 
+        @foreach($products as $product)
+
+            <!-- Modal for showing delete confirmation -->
+                <div class="modal fade" id="delete_confirm{{ $product->id }}" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="user_delete_confirm_title" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">[close]</button>
+                                <h4 class="modal-title" id="user_delete_confirm_title">
+                                    Delete Product: {{ $product->name }}
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                Are you sure to delete this Product? This operation is irreversible.
+                                <div class="row">
+                                    {{--<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>--}}
+                                    <form action="{{ route('products.destroy', ['product' => $product->id]) }}" method="post">
+
+                                        @csrf
+                                        {{ @method_field('DELETE') }}
+
+                                        <button type="submit" class="btn btn-danger pull-right">Delete</button>
+
+                                    </form>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            @endforeach
 
         <a href="{{ route('products.create') }}" class="pull-left btn btn-primary">Add New Product</a>
 

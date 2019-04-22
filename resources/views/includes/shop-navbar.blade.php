@@ -13,9 +13,11 @@
         <div class="row">
             <div class="col-md-8 offset-md-2 col-12">
                 <div class="search-form">
-                    <form action="search">
-                        <input type="text" placeholder="Search Here...">
-                        <button><i class="fa fa-search"></i></button>
+                    <form action="{{ route('shop.search') }}" type="get">
+
+                        @csrf
+                        <input type="text" name="search" placeholder="Search Here...">
+                        <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
                 </div>
             </div>
@@ -97,7 +99,7 @@
                 </div>
                 <div class="col-md-4 col-lg-2 col-sm-5 col-4">
                     <ul class="search-cart-wrapper d-flex">
-                        {{--<li class="search-tigger"><a href="javascript:void(0);"><i class="fa fa-search"></i></a></li>--}}
+                        <li class="search-tigger"><a href="javascript:void(0);"><i class="fa fa-search"></i></a></li>
                         <li><a href="{{ route('shop.cart') }}"><i class="fa fa-shopping-basket"></i>
                                 <span>{{ sizeof(Cart::instance(Session::get('cart_instance'))->content()) }}</span></a>
 

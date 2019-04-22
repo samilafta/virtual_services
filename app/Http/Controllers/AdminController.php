@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Order;
 use Carbon\Carbon;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -41,6 +42,20 @@ class AdminController extends Controller
 
     }
 
+    public function show_order($id) {
+
+        $order = Order::find($id);
+
+        $cart = Cart::instance($order->cart_id)->restore('qty');
+
+//        Cart::instance($order->cart_id)->store($order->cart_id);
+
+        dd($cart);
+
+        return view('admin.orders.show', compact('order'));
+
+    }
+
     public function orders_pay($id) {
 
         $order = Order::find($id);
@@ -72,14 +87,14 @@ class AdminController extends Controller
         $from_date = $request->from_date;
         $to_date = $request->to_date;
 
-        $f = new \DateTime($request->from_date);
-        $t = new \DateTime($request->to_date);
+//        $f = new \DateTime($request->from_date);
+//        $t = new \DateTime($request->to_date);
 
 //        $date = Carbon::parse('Y-m-d', $from_date);
 
 
-        $orders = Order::whereBetween('created_at', array($f, $t))->get();
-        $orders_total = Order::whereBetween('created_at', array($f, $t))->sum('total_amount');
+        $orders = Order::whereBetween('created_at', array($from_date, $to_date))->get();
+        $orders_total = Order::whereBetween('created_at', array($from_date, $to_date))->sum('total_amount');
 
 //        dd($orders);
         return view('admin.generate', compact('orders', 'orders_total', 'from_date', 'to_date'));

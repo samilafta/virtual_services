@@ -83,5 +83,14 @@ class ShopFrontController extends Controller
 
     }
 
+    public function search(Request $request){
+
+        $categories = Category::all();
+        $products = Product::where('name', 'LIKE', '%' . $request->search . '%')->get();
+
+        return view('shop.search', compact('products', 'categories'));
+
+    }
+
 
 }
