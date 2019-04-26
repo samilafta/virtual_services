@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Cart;
 use App\Category;
 use App\Order;
 use App\Product;
@@ -59,6 +60,8 @@ class ShopFrontController extends Controller
 
     public function displayCart() {
 
+        $session = Session::get('cart_instance');
+//        $carts = Cart::where('cart_id', '=', '')
         $categories = Category::all();
         return view('shop.cart', compact('categories'));
 

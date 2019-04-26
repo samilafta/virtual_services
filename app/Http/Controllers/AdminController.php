@@ -27,10 +27,14 @@ class AdminController extends Controller
         $total_orders = Order::count();
         $total_revenue = Order::sum('total_amount');
 
-//        dd($todays_amt);
+        $orders = Order::orderBy('created_at', 'desc')->get();
 
-        return view('dashboard', compact('todays_orders', 'todays_amt', 'paid_orders',
-            'unpaid_orders', 'delivered_orders', 'undelivered_orders', 'total_orders', 'total_revenue'));
+        return view('dashboard', compact('orders'));
+
+////        dd($todays_amt);
+//
+//        return view('dashboard', compact('todays_orders', 'todays_amt', 'paid_orders',
+//            'unpaid_orders', 'delivered_orders', 'undelivered_orders', 'total_orders', 'total_revenue'));
 
     }
 
@@ -82,19 +86,33 @@ class AdminController extends Controller
 
     }
 
+    public function generate_report_custom(Request $request) {
+
+        $from_date = $request->from_date . " 9:00:24";
+        $to_date = $request->to_date . " 23:59:59";
+        $p_method = $request->p_method;
+        $p_status = $request->p_status;
+
+//        dd($from_date);
+
+        $orders = Order::whereBetween('created_at', array($from_date, $to_date))->where('payment_method', '=', $p_method)->
+                        where('payment_status', '=', $p_status)->get();
+        $orders_total = Order::whereBetween('created_at', array($from_date, $to_date))->where('payment_method', '=', $p_method)->
+        where('payment_status', '=', $p_status)->sum('total_amount');
+
+//        dd($orders);
+        return view('admin.custom', compact('orders', 'orders_total', 'from_date', 'to_date'));
+
+    }
+
     public function generate_report(Request $request) {
 
-        $from_date = $request->from_date;
-        $to_date = $request->to_date;
+        $from_date = $request->from_date . " 9:00:24";
+        $to_date = $request->to_date . " 23:59:59";
+        $status = $request->status;
 
-//        $f = new \DateTime($request->from_date);
-//        $t = new \DateTime($request->to_date);
-
-//        $date = Carbon::parse('Y-m-d', $from_date);
-
-
-        $orders = Order::whereBetween('created_at', array($from_date, $to_date))->get();
-        $orders_total = Order::whereBetween('created_at', array($from_date, $to_date))->sum('total_amount');
+        $orders = Order::whereBetween('created_at', array($from_date, $to_date))->where('status', '=', $status)->get();
+        $orders_total = Order::whereBetween('created_at', array($from_date, $to_date))->where('status', '=', $status)->sum('total_amount');
 
 //        dd($orders);
         return view('admin.generate', compact('orders', 'orders_total', 'from_date', 'to_date'));

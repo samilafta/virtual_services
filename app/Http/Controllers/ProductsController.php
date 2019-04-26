@@ -49,6 +49,7 @@ class ProductsController extends Controller
             'name' => 'required',
             'image' => 'required|image',
             'description' => 'required',
+            'stock' => 'required',
             'price' => 'required'
 
         ]);
@@ -60,6 +61,7 @@ class ProductsController extends Controller
         Product::create([
             'name' => $request->name,
             'price' => $request->price,
+            'stock' => $request->stock,
             'image' => 'uploads/products/'.$featured_new_name,
             'description' => $request->description,
             'category_id' => $request->category,
@@ -67,9 +69,7 @@ class ProductsController extends Controller
 
 //        notify()->success('You successfully created a post');
 
-        return redirect()->route('products.index');
-
-
+        return redirect()->route('products.create')->withSuccessMessage('Product added successfully');
 
     }
 
@@ -116,6 +116,7 @@ class ProductsController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'price' => 'required',
+            'stock' => 'required',
             'description' => 'required',
         ]);
 
@@ -133,11 +134,11 @@ class ProductsController extends Controller
 
         $product->name = $request->name;
         $product->price = $request->price;
+        $product->stock = $request->stock;
         $product->description = $request->description;
         $product->save();
 
-        return redirect()->route('products.index');
-
+        return redirect()->route('products.index')->withSuccessMessage('Product updated successfully');
 
     }
 
@@ -159,7 +160,7 @@ class ProductsController extends Controller
 
         $product->delete();
 
-        return redirect()->back();
+        return redirect()->back()->withSuccessMessage('Product deleted successfully');
 
 
     }

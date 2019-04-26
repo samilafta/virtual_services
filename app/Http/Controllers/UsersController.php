@@ -54,7 +54,7 @@ class UsersController extends Controller
 
 //        notify()->success('User successfully created');
 
-        return redirect()->route('users.index');
+        return redirect()->route('users.create')->withSuccessMessage('Admin created successfully');
 
 
     }
@@ -115,7 +115,7 @@ class UsersController extends Controller
 
 //        notify()->success('The User was updated');
 
-        return redirect()->route('users.index');
+        return redirect()->route('users.index')->withSuccessMessage('Admin updated successfully');
 
 
     }
@@ -133,6 +133,6 @@ class UsersController extends Controller
 
 //        notify()->success('User deleted');
 
-        return redirect()->back();
+        return redirect()->back()->withSuccessMessage('Admin removed successfully');
     }
 }

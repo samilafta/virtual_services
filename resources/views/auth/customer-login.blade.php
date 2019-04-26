@@ -8,73 +8,91 @@
 @section('shop-content')
 
 
+    <div class="page-head_agile_info_w3l page-head_agile_info_w3l-2">
+
+    </div>
     <!-- .breadcumb-area start -->
-    <div class="breadcumb-area bg-img-4 ptb-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="breadcumb-wrap text-center">
-                        <h2>Account</h2>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><span>Login</span></li>
-                        </ul>
-                    </div>
-                </div>
+    <div class="services-breadcrumb">
+        <div class="agile_inner_breadcrumb">
+            <div class="container">
+                <ul class="w3_short">
+                    <li>
+                        <a href="{{ route('index') }}">Home</a>
+                        <i>|</i>
+                    </li>
+                    <li>Login</li>
+                </ul>
             </div>
         </div>
     </div>
-    <!-- .breadcumb-area end -->
-    <!-- checkout-area start -->
-    <div class="account-area ptb-100">
-        <div class="container">
+
+
+    <div class="ads-grid py-sm-5 py-4">
+        <div class="container py-xl-4 py-lg-2">
+            <!-- tittle heading -->
+
+            <!-- //tittle heading -->
             <div class="row">
-                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
-                    <div class="account-form form-style">
-                        <form action="{{ route('customer.login') }}" method="post">
-
-                            @csrf
-
-                            <p>Email Address *</p>
-                            <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
-                            {{--<div class="invalid-feedback">--}}
-                                {{--Email is invalid--}}
-                            {{--</div>--}}
-                            @if ($errors->has('email'))
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $errors->first('email') }}</strong>
-                                </span>
-                            @endif
-
-                            <p>Password *</p>
-                            <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required data-eye>
-                            {{--<div class="invalid-feedback">--}}
-                                {{--Password is required--}}
-                            {{--</div>--}}
-                            @if ($errors->has('password'))
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $errors->first('password') }}</strong>
-                                </span>
-                            @endif
+                <!-- product left -->
+                <div class="agileinfo-ads-display col-lg-12">
+                    <div class="wrapper">
+                        <!-- first section -->
+                        <div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
+                            {{--<h3 class="heading-tittle text-center font-italic">New Brand Mobiles</h3>--}}
                             <div class="row">
-                                <div class="col-lg-6">
-                                    <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                    <label for="password">Remember Me</label>
+
+                                <div class="col-lg-8">
+                                    <form action="{{ route('customer.login') }}" method="post">
+
+                                        @csrf
+                                        <div class="form-group">
+                                            <label class="col-form-label">Email</label>
+                                            <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>                                        </div>
+                                            @if ($errors->has('email'))
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('email') }}</strong>
+                                                </span>
+                                            @endif
+
+                                        <div class="form-group">
+                                            <label class="col-form-label">Password</label>
+                                            <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                            @if ($errors->has('password'))
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('password') }}</strong>
+                                                </span>
+                                            @endif
+                                        </div>
+                                        <div class="right-w3l">
+                                            <input type="submit" class="form-control" value="Log in">
+                                        </div>
+                                        <div class="sub-w3l">
+                                            <div class="custom-control custom-checkbox mr-sm-2">
+                                                <input type="checkbox" name="remember" class="custom-control-input" id="customControlAutosizing">
+                                                <label class="custom-control-label" for="customControlAutosizing">Remember me?</label>
+                                            </div>
+                                        </div>
+                                        <p class="text-center dont-do mt-3">Don't have an account?
+                                            <a href="{{ route('customer.register') }}">
+                                                Register Now</a>
+                                        </p>
+                                    </form>
                                 </div>
+
+
                             </div>
-                            <button type="submit">SIGN IN</button>
-
-
-                        </form>
-                        <div class="text-center">
-                            <a href="{{ route('customer.register') }}">Or Create an Account</a>
                         </div>
+                        <!-- //first section -->
+                        <!-- fourth section -->
                     </div>
                 </div>
+                <!-- //product left -->
+
+                <!-- product right -->
             </div>
         </div>
     </div>
-    <!-- checkout-area end -->
+
 
 
 @endsection

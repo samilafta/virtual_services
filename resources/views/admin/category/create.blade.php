@@ -1,13 +1,20 @@
 @extends('layouts.app-dashboard')
 
-@section('title')
-    Category
-    @parent
-@stop
+@section('styles')
 
-@section('page')
-     Create Category
-    @parent
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ asset('admin/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Menu CSS -->
+    <link href="{{ asset('admin/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('admin/plugins/bower_components/tablesaw-master/dist/tablesaw.css') }}" rel="stylesheet">
+    <!-- animation CSS -->
+    <link href="{{ asset('admin/css/animate.css') }}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
+    <!-- color CSS -->
+    <link href="{{ asset('admin/css/colors/megna-dark.css') }}" id="theme" rel="stylesheet">
+
 @stop
 
 @section('active-ca')
@@ -17,60 +24,79 @@
 
 @section('dashboard-content')
 
+    <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h4 class="page-title">Product Divisions</h4> </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+            <ol class="breadcrumb">
+                <li><a href="javascript:void(0)">Dashboard</a></li>
+                <li class="active">Product Divisions</li>
+            </ol>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
     <div class="row">
-        @if(count($errors) > 0)
+        <div class="col-md-6">
+            <div class="white-box">
+                <h3 class="box-title m-b-0">Add Product Divisions</h3>
+                <div class="row">
 
-            <ul class="list-group">
+                    @if (session()->has('success_message'))
+                        <div class="alert alert-success">
+                            {{ session()->get('success_message') }}
+                        </div>
+                    @endif
 
-                @foreach($errors->all() as $error)
-
-                    <li class="list-group-item text-danger">
-                        {{ $error }}
-                    </li>
-
-                @endforeach
-
-            </ul>
-            <br>
-
-        @endif
-
-        <div class="col-lg-8 col-md-7">
-            <div class="card">
-                <div class="header">
-                    <h4 class="title">Add New Category</h4>
-                </div>
-                <div class="content">
-                    <form action="{{ route('categories.store') }}" method="POST" enctype="multipart/form-data">
-
-                        @csrf
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input type="text" class="form-control border-input" name="name" required>
-                                </div>
+                        @if (session()->has('error_message'))
+                            <div class="alert alert-danger">
+                                {{ session()->get('error_message') }}
                             </div>
-                        </div>
+                        @endif
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Image</label>
-                                    <input type="file" class="form-control border-input" name="image" required>
-                                </div>
+                        <div class="col-sm-12 col-xs-12">
+                        <form action="{{ route('categories.store') }}" method="POST" enctype="multipart/form-data">
+
+                            @csrf
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Division Name</label>
+                                <input type="text" class="form-control" name="name" id="exampleInputEmail1" required>
                             </div>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-info btn-fill btn-wd">Add</button>
-                        </div>
-                        <div class="clearfix"></div>
-                    </form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Division Image</label>
+                                <input type="file" class="form-control border-input" name="image" required>
+                            </div>
+
+                            <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                            {{--<button type="reset" class="btn btn-inverse waves-effect waves-light">Cancel</button>--}}
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
 
+
+
 @endsection
+
+@section('scripts')
+
+
+    <!-- jQuery -->
+    <script src="{{ asset('admin/plugins/bower_components/jquery/dist/jquery.min.js') }}"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ asset('admin/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <!-- Menu Plugin JavaScript -->
+    <script src="{{ asset('admin/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js') }}"></script>
+    <!--slimscroll JavaScript -->
+    <script src="{{ asset('admin/js/jquery.slimscroll.js') }}"></script>
+    <!--Wave Effects -->
+    <script src="{{ asset('admin/js/waves.js') }}"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="{{ asset('admin/js/custom.min.js"') }}"></script>
+    <!--Style Switcher -->
+    <script src="{{ asset('admin/plugins/bower_components/styleswitcher/jQuery.style.switcher.js') }}"></script>
+
+@stop

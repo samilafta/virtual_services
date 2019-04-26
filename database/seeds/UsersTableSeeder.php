@@ -13,13 +13,14 @@ class UsersTableSeeder extends Seeder
     {
 
         App\User::create([
-            'name' => 'Samuel Owusu',
-            'email' => 'sam@gmail.com',
+            'name' => 'Daniel Amartey',
+            'email' => 'dan@gmail.com',
             'password' => \Illuminate\Support\Facades\Hash::make('123456'),
         ]);
 
         \App\Customer::create([
-            'name' => 'Peter Ayambire',
+            'firstname' => 'Peter',
+            'lastname' => 'Ayambire',
             'email' => 'peter@gmail.com',
             'phone_number' => '0547576916',
             'password' => \Illuminate\Support\Facades\Hash::make('12345678'),

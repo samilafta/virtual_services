@@ -62,7 +62,7 @@ class CategoriesController extends Controller
 //       Session::flash('success', 'You successfully created a category');
 //        notify()->success('You successfully created a category');
 
-        return redirect()->route('categories.index');
+        return redirect()->route('categories.create')->withSuccessMessage('Product Division Created Successfully');
 
     }
 
@@ -123,7 +123,7 @@ class CategoriesController extends Controller
 
 //        notify()->success('You successfully updated the category');
 
-        return redirect()->route('categories.index');
+        return redirect()->route('categories.index')->withSuccessMessage('Division updated successfully');
 
     }
 
@@ -153,7 +153,7 @@ class CategoriesController extends Controller
 
 //        notify()->success('You successfully deleted the category');
 
-        return redirect()->route('categories.index');
+        return redirect()->route('categories.index')->withSuccessMessage('Division deleted successfully');
 
     }
 }

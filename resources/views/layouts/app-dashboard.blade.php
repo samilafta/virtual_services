@@ -1,226 +1,144 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('admin/assets/img/apple-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('admin/assets/img/favicon.png') }}">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title') | Virtual Services</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('admin/plugins/images/favicon.png') }}">
+    <title>Admin - Dexcel Media Solutions</title>
 
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
+    @yield('styles')
 
-
-    <!-- Bootstrap core CSS     -->
-    <link href="{{ asset('admin/assets/css/bootstrap.min.css') }}" rel="stylesheet" />
-
-    <!-- Animation library for notifications   -->
-    <link href="{{ asset('admin/assets/css/animate.min.css') }}" rel="stylesheet"/>
-
-    <!--  Paper Dashboard core CSS    -->
-    <link href="{{ asset('admin/assets/css/paper-dashboard.css') }}" rel="stylesheet"/>
-
-
-    <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="{{ asset('admin/assets/css/demo.css') }}" rel="stylesheet" />
-
-
-    <!--  Fonts and icons     -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
-    <link href="{{ asset('admin/assets/css/themify-icons.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin/assets/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin/assets/css/normalize.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin/assets/css/skeleton.min.css') }}" rel="stylesheet">
-
-
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body>
 
-<div class="wrapper">
-    <div class="sidebar" data-background-color="white" data-active-color="danger">
-
-        <!--
-            Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
-            Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
-        -->
-
-        <div class="sidebar-wrapper">
-            <div class="logo">
-                <a href="{{ route('home') }}">
-                    <img src="{{ asset('shop/assets/images/virtual.png') }}" width="200px" />
-                </a>
+<body class="fix-header">
+<!-- Wrapper -->
+<!-- ============================================================== -->
+<div id="wrapper">
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <nav class="navbar navbar-default navbar-static-top m-b-0">
+        <div class="navbar-header">
+            <div class="top-left-part">
+                <!-- Logo -->
+                <a class="logo" href="#">
+                    <!-- Logo icon image, you can use font-icon also --><b>
+                        <!--This is dark logo icon--><img src="{{ asset('admin/plugins/images/admin-logo.png') }}" alt="home" class="dark-logo" /><!--This is light logo icon-->
+                        <img src="{{ asset('admin/plugins/images/admin-logo-dark.png') }}" alt="home" class="light-logo" />
+                    </b>
+                    <!-- Logo text image you can use text also --><span class="hidden-xs">
+                        <!--This is dark logo text--><img src="{{ asset('admin/plugins/images/admin-text.png') }}" alt="home" class="dark-logo" />
+                        <!--This is light logo text--><img src="{{ asset('admin/plugins/images/admin-text-dark.png') }}" alt="home" class="light-logo" />
+                     </span> </a>
             </div>
-
-            <ul class="nav">
-                <li class="@yield('active-da')">
-                    <a href="{{ route('home') }}">
-                        <i class="ti-panel"></i>
-                        <p>Dashboard</p>
-                    </a>
+            <!-- /Logo -->
+            <!-- Search input and Toggle icon -->
+            <ul class="nav navbar-top-links navbar-right pull-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="javascript:void(0)"><b class="hidden-xs">{{ Auth::user()->name }}</b><span class="caret"></span> </a>
+                    <ul class="dropdown-menu dropdown-user animated flipInY">
+                        <li>
+                            <div class="dw-user-box">
+                                <div class="u-text">
+                                    <h4>{{ Auth::user()->name }}</h4>
+                                    <p class="text-muted">{{ Auth::user()->email }}</p></div>
+                            </div>
+                        </li>
+                        <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i> Logout</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
                 </li>
-                <li class="@yield('active-or')">
-                    <a href="{{ route('orders.index') }}">
-                        <i class="ti-user"></i>
-                        <p>Orders</p>
-                    </a>
+                <!-- /.dropdown -->
+            </ul>
+        </div>
+        <!-- /.navbar-header -->
+        <!-- /.navbar-top-links -->
+        <!-- /.navbar-static-side -->
+    </nav>
+    <!-- End Top Navigation -->
+    <!-- ============================================================== -->
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav">
+            <div class="sidebar-head">
+                <h3><span class="fa-fw open-close"><i class="ti-menu hidden-xs"></i><i class="ti-close visible-xs"></i></span> <span class="hide-menu">Navigation</span></h3> </div>
+            <ul class="nav" id="side-menu">
+                <li> <a href="{{ route('home') }}" class="waves-effect @yield('active-da')"><i class="mdi mdi-av-timer fa-fw" data-icon="v"></i>
+                        <span class="hide-menu"> Dashboard <span class="fa arrow"></span> <span class="label label-rouded label-inverse pull-right">4</span></span></a>
                 </li>
-                <li class="@yield('active-ca')">
-                    <a href="{{ route('categories.index') }}">
-                        <i class="ti-user"></i>
-                        <p>Categories</p>
-                    </a>
+                <li> <a href="javascript:void(0)" class="waves-effect @yield('active-ca')"><i class="mdi mdi-content-copy fa-fw"></i>
+                        <span class="hide-menu">Divisions<span class="fa arrow"></span><span class="label label-rouded label-warning pull-right">30</span></span></a>
+                    <ul class="nav nav-second-level">
+                        <li> <a href="{{ route('categories.create') }}"><span class="hide-menu">Add Division</span></a> </li>
+                        <li> <a href="{{ route('categories.index') }}"><span class="hide-menu">Divisions List</span></a> </li>
+                    </ul>
                 </li>
-                <li class="@yield('active-pr')">
-                    <a href="{{ route('products.index') }}">
-                        <i class="ti-view-list-alt"></i>
-                        <p>Products</p>
-                    </a>
+                <li class="devider"></li>
+                <li> <a href="javascript:void(0)" class="waves-effect @yield('active-pr')"><i class="mdi mdi-clipboard-text fa-fw"></i>
+                        <span class="hide-menu">Products<span class="fa arrow"></span></span></a>
+                    <ul class="nav nav-second-level">
+                        <li> <a href="{{ route('products.create') }}"><span class="hide-menu">Add Product</span></a> </li>
+                        <li> <a href="{{ route('products.index') }}"><span class="hide-menu">Products List</span></a> </li>
+                    </ul>
                 </li>
-                <li class="@yield('active-cu')">
-                    <a href="{{ route('customers.index') }}">
-                        <i class="ti-text"></i>
-                        <p>Customers</p>
-                    </a>
+                <li> <a href="{{ route('customers.index') }}" class="waves-effect @yield('active-cu')"><i class="mdi mdi-table fa-fw"></i>
+                        <span class="hide-menu">Customers<span class="fa arrow"></span><span class="label label-rouded label-danger pull-right">9</span></span></a>
                 </li>
-                <li class="@yield('active-us')">
-                    <a href="{{ route('users.index') }}">
-                        <i class="ti-pencil-alt2"></i>
-                        <p>Users</p>
-                    </a>
+                <li class="last-nav"><a href="javascript:void(0)" class="waves-effect @yield('active-ad')"><i class="mdi mdi-apps fa-fw"></i>
+                        <span class="hide-menu">Administrators<span class="fa arrow"></span></span></a>
+                    <ul class="nav nav-second-level">
+                        <li> <a href="{{ route('users.create') }}"><span class="hide-menu">Add Administrator</span></a> </li>
+                        <li> <a href="{{ route('users.index') }}"><span class="hide-menu">Administrators List</span></a> </li>
+                    </ul>
                 </li>
-                <li class="@yield('active-re')">
-                    <a href="{{ route('reports') }}">
-                        <i class="ti-map"></i>
-                        <p>Reports</p>
-                    </a>
-                </li>
-
-                <li class="active-pro">
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                 document.getElementById('logout-form').submit();">
-                        <i class="ti-export"></i>
-                        <p>Log Out</p>
-                    </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form>
-                </li>
+                <li class="devider"></li>
+                <li> <a href="{{ route('reports') }}" class="waves-effect @yield('active-re')"><i  class="mdi mdi-settings fa-fw"></i>
+                        <span class="hide-menu">Reports</span></a> </li>
             </ul>
         </div>
     </div>
+    <!-- ============================================================== -->
+    <!-- End Left Sidebar -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page Content -->
+    <!-- ============================================================== -->
 
-    <div class="main-panel">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar bar1"></span>
-                        <span class="icon-bar bar2"></span>
-                        <span class="icon-bar bar3"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">@yield('page')</a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="ti-user"></i>
-                                @auth
-                                    <p>{{ Auth::user()->name }}</p>
-                                @endauth
-                            </a>
-                        </li>
-                    </ul>
+    <div id="page-wrapper">
+        <div class="container-fluid">
 
-                </div>
-            </div>
-        </nav>
-
-        <div class="content">
-            <div class="container-fluid">
-
-                @yield('dashboard-content')
-
-            </div>
+            @yield('dashboard-content')
+            <!-- /.container-fluid -->
+            <footer class="footer text-center"> 2019 &copy; Dexcel Media Solutions </footer>
         </div>
-
-
-        <footer class="footer">
-            <div class="container-fluid">
-                <div class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by <a href="#">Virtual Services</a>
-                </div>
-            </div>
-        </footer>
-
+        <!-- ============================================================== -->
+        <!-- End Page Content -->
+        <!-- ============================================================== -->
     </div>
+
+
+    @yield('scripts')
+    <!-- /#wrapper -->
 </div>
-
-
 </body>
-
-<!--   Core JS Files   -->
-<script src="{{ asset('admin/assets/js/jquery-1.10.2.js') }}" type="text/javascript"></script>
-<script src="{{ asset('admin/assets/js/moment.min.js') }}" type="text/javascript"></script>
-
-<script src="{{ asset('admin/assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
-
-<!--  Checkbox, Radio & Switch Plugins -->
-<script src="{{ asset('admin/assets/js/bootstrap-checkbox-radio.js') }}"></script>
-
-<!--  Charts Plugin -->
-<script src="{{ asset('admin/assets/js/chartist.min.js') }}"></script>
-
-<!--  Notifications Plugin    -->
-<script src="{{ asset('admin/assets/js/bootstrap-notify.js') }}"></script>
-
-<!--  Google Maps Plugin    -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-
-<!-- Paper Dashboard Core javascript and methods for Demo purpose -->
-<script src="{{ asset('admin/assets/js/paper-dashboard.js') }}"></script>
-
-<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
-<script src="{{ asset('admin/assets/js/demo.js') }}"></script>
-<script src="{{ asset('admin/assets/js/bootstrap-datetimepicker.min.js') }}"></script>
-<script src="{{ asset('admin/assets/js/printThis.js') }}"></script>
-
-<script type="text/javascript">
-
-    $("#datetime3, #datetime4").datetimepicker({
-        format: 'YYYY-MM-DD HH:mm:ss'
-    }).parent().css("position :relative");
-
-    $('#print').on("click", function () {
-        $('#receipt').printThis({
-            base: "https://jasonday.github.io/printThis/"
-        });
-    });
-
-</script>
-
-{{--<script type="text/javascript">--}}
-    {{--$(document).ready(function(){--}}
-
-        {{--demo.initChartist();--}}
-
-        {{--$.notify({--}}
-            {{--icon: 'ti-gift',--}}
-            {{--message: "Welcome to <b>Virtual Services</b> Dashboard."--}}
-
-        {{--},{--}}
-            {{--type: 'success',--}}
-            {{--timer: 4000--}}
-        {{--});--}}
-
-    {{--});--}}
-{{--</script>--}}
 
 </html>

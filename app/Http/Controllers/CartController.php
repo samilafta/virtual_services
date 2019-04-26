@@ -89,6 +89,8 @@ class CartController extends Controller
     {
         $session = Session::get('cart_instance');
         Cart::instance($session)->destroy();
+        $hash = bin2hex(random_bytes(10));
+        Session::put('cart_instance', $hash);
         return redirect(route('shop.cart'))->withSuccessMessage('Your cart has been cleared!');
     }
 

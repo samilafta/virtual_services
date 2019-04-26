@@ -164,6 +164,11 @@ Route::group(['middleware' => ['auth']], function() {
             'as' => 'reports.generate'
         ]);
 
+        Route::post('/reports/generate/custom', [
+            'uses' => 'AdminController@generate_report_custom',
+            'as' => 'reports.generate.custom'
+        ]);
+
 
     });
 

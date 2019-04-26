@@ -83,9 +83,17 @@ class RegisterController extends Controller
 
     protected function createCustomer(Request $request)
     {
-        $this->validator($request->all())->validate();
-        $customer = Customer::create([
-            'name' => $request['name'],
+//        $this->validator($request->all())->validate();
+        $this->validate($request, [
+            'firstname' => ['required', 'string', 'max:255'],
+            'lastname' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:customers'],
+            'phone_number' => ['required', 'numeric', 'max:10'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
+        Customer::create([
+            'firstname' => $request['firstname'],
+            'lastname' => $request['lastname'],
             'email' => $request['email'],
             'phone_number' => $request['phone_number'],
             'password' => Hash::make($request['password']),

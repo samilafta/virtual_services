@@ -7,203 +7,78 @@
 
 @section('shop-content')
 
-    <!-- .breadcumb-area start -->
-    <div class="breadcumb-area bg-img-4 ptb-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="breadcumb-wrap text-center">
-                        <h2>{{ $product->name }}</h2>
-                        <ul>
-                            <li><a href="{{ route('index') }}">Home</a></li>
-                            <li><span>Product Detail</span></li>
-                        </ul>
-                    </div>
-                </div>
+    <div class="page-head_agile_info_w3l">
+
+    </div>
+    <!-- //banner-2 -->
+    <!-- page -->
+    <div class="services-breadcrumb">
+        <div class="agile_inner_breadcrumb">
+            <div class="container">
+                <ul class="w3_short">
+                    <li>
+                        <a href="{{ route('index') }}">Home</a>
+                        <i>|</i>
+                    </li>
+                    <li>{{ $product->name }}</li>
+                </ul>
             </div>
         </div>
     </div>
 
-    <!-- single-product-area start-->
-    <div class="single-product-area ptb-100">
-        <div class="container">
+    <div class="banner-bootom-w3-agileits py-5">
+        <div class="container py-xl-4 py-lg-2">
+            <!-- tittle heading -->
+            <h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
+            <!-- //tittle heading -->
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="product-single-img">
-                        <div class="product-active owl-carousel">
-                            <div class="item">
-                                <img src="{{ asset($product->image) }}" alt="">
-                            </div>
-                        </div>
-                        <div class="product-thumbnil-active  owl-carousel">
-                            <div class="item">
-                                <img src="{{ asset($product->image) }}" alt="">
-                            </div>
+                <div class="col-lg-5 col-md-8 single-right-left ">
+                    <div class="grid images_3_of_2">
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <li data-thumb="images/si1.jpg" style="list-style-type: none;">
+                                    <div class="thumb-image">
+                                        <img src="{{ asset($product->image) }}" class="img-fluid" alt=""> </div>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="product-single-content">
-                        <h3>{{ $product->name }}</h3>
-                        <div class="rating-wrap fix">
-                            <span class="pull-left">GHS {{ $product->price }}</span>
-                        </div>
+
+                <div class="col-lg-7 single-right-left simpleCart_shelfItem">
+                    <h3 class="mb-3">{{ $product->name }}</h3>
+                    <p class="mb-3">
+                        <span class="item_price">GHS {{ $product->price }}</span>
+                        {{--<del class="mx-2 font-weight-light">$280.00</del>--}}
+                    </p>
+                    <div class="product-single-w3l">
                         <p>{!! $product->description !!}}</p>
-                        <ul class="input-style">
+                    </div>
+                    <div class="occasion-cart">
+                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
                             <form action="{{ route('shop.addtocart') }}" method="POST" class="side-by-side">
                                 {!! csrf_field() !!}
-                                <li class="quantity cart-plus-minus">
-                                    <input type="text" name="quantity" value="1"/>
-                                </li>
-                                <li>
+                                {{--<li class="quantity cart-plus-minus">--}}
+                                    <input type="number" name="quantity" min="1" value="1" max="{{ $product->stock }}"/>
+                                {{--</li>--}}
+                                {{--<li>--}}
 
                                     <input type="hidden" name="id" value="{{ $product->id }}">
                                     <input type="hidden" name="name" value="{{ $product->name }}">
                                     <input type="hidden" name="price" value="{{ $product->price }}">
 
-                                    <button type="submit" class="btn btn-block btn-warning">Add to Cart</button>
+                                    <input type="submit" name="submit" value="Add to cart" class="button" />
 
-                                </li>
+                                {{--</li>--}}
                             </form>
-                        </ul>
-                        <ul class="cetagory">
-                            <li>Category:</li>
-                            <li><a href="{{ route('shop.category', ['id' => $product->category->id]) }}">{{ $product->category->name }}</a></li>
-                        </ul>
-                        {{--<ul class="socil-icon">--}}
-                            {{--<li>Share :</li>--}}
-                            {{--<li><a href="#"><i class="fa fa-facebook"></i></a></li>--}}
-                            {{--<li><a href="#"><i class="fa fa-twitter"></i></a></li>--}}
-                            {{--<li><a href="#"><i class="fa fa-linkedin"></i></a></li>--}}
-                            {{--<li><a href="#"><i class="fa fa-instagram"></i></a></li>--}}
-                            {{--<li><a href="#"><i class="fa fa-google-plus"></i></a></li>--}}
-                        {{--</ul>--}}
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-60">
-                <div class="col-12">
-                    <div class="single-product-menu">
-                        <ul class="nav">
-                            <li><a class="active" data-toggle="tab" href="#description">Description</a> </li>
-                            {{--<li><a data-toggle="tab" href="#tag">Faq</a></li>--}}
-                            {{--<li><a data-toggle="tab" href="#review">Review</a></li>--}}
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="description">
-                            <div class="description-wrap">
-                                <p>{!! $product->description !!}</p>
-                            </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- single-product-area end-->
-    <!-- featured-product-area start -->
-    {{--<div class="featured-product-area">--}}
-        {{--<div class="container">--}}
-            {{--<div class="row">--}}
-                {{--<div class="col-12">--}}
-                    {{--<div class="section-title">--}}
-                        {{--<h2>Featured Product</h2>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-            {{--<div class="row">--}}
-                {{--<div class="col-lg-3 col-sm-6 col-12">--}}
-                    {{--<div class="featured-product-wrap">--}}
-                        {{--<div class="featured-product-img">--}}
-                            {{--<img src="assets/images/product/1.jpg" alt="">--}}
-                        {{--</div>--}}
-                        {{--<div class="featured-product-content">--}}
-                            {{--<div class="row">--}}
-                                {{--<div class="col-7">--}}
-                                    {{--<h3><a href="shop.html">Unique Collection</a></h3>--}}
-                                    {{--<p>$219.56</p>--}}
-                                {{--</div>--}}
-                                {{--<div class="col-5 text-right">--}}
-                                    {{--<ul>--}}
-                                        {{--<li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>--}}
-                                        {{--<li><a href="cart.html"><i class="fa fa-heart"></i></a></li>--}}
-                                    {{--</ul>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="col-lg-3 col-sm-6 col-12">--}}
-                    {{--<div class="featured-product-wrap">--}}
-                        {{--<div class="featured-product-img">--}}
-                            {{--<img src="assets/images/product/2.jpg" alt="">--}}
-                        {{--</div>--}}
-                        {{--<div class="featured-product-content">--}}
-                            {{--<div class="row">--}}
-                                {{--<div class="col-7">--}}
-                                    {{--<h3><a href="shop.html">Candle Stand</a></h3>--}}
-                                    {{--<p>$354.75</p>--}}
-                                {{--</div>--}}
-                                {{--<div class="col-5 text-right">--}}
-                                    {{--<ul>--}}
-                                        {{--<li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>--}}
-                                        {{--<li><a href="cart.html"><i class="fa fa-heart"></i></a></li>--}}
-                                    {{--</ul>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="col-lg-3 col-sm-6 col-12">--}}
-                    {{--<div class="featured-product-wrap">--}}
-                        {{--<div class="featured-product-img">--}}
-                            {{--<img src="assets/images/product/3.jpg" alt="">--}}
-                        {{--</div>--}}
-                        {{--<div class="featured-product-content">--}}
-                            {{--<div class="row">--}}
-                                {{--<div class="col-7">--}}
-                                    {{--<h3><a href="shop.html">Small Chair</a></h3>--}}
-                                    {{--<p>$214.80</p>--}}
-                                {{--</div>--}}
-                                {{--<div class="col-5 text-right">--}}
-                                    {{--<ul>--}}
-                                        {{--<li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>--}}
-                                        {{--<li><a href="cart.html"><i class="fa fa-heart"></i></a></li>--}}
-                                    {{--</ul>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="col-lg-3 col-sm-6 col-12">--}}
-                    {{--<div class="featured-product-wrap">--}}
-                        {{--<div class="featured-product-img">--}}
-                            {{--<img src="assets/images/product/4.jpg" alt="">--}}
-                        {{--</div>--}}
-                        {{--<div class="featured-product-content">--}}
-                            {{--<div class="row">--}}
-                                {{--<div class="col-7">--}}
-                                    {{--<h3><a href="shop.html">Wonder Watch</a></h3>--}}
-                                    {{--<p>$241.00</p>--}}
-                                {{--</div>--}}
-                                {{--<div class="col-5 text-right">--}}
-                                    {{--<ul>--}}
-                                        {{--<li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>--}}
-                                        {{--<li><a href="cart.html"><i class="fa fa-heart"></i></a></li>--}}
-                                    {{--</ul>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-    <!-- featured-product-area end -->
 
 
 @endsection
