@@ -4010,7 +4010,7 @@ table.focus-on tbody tr.focused td {
   height: 100%;
 }
 .new-login-register .lg-info-panel {
-  background: url(../../plugins/images/login-register.jpg) no-repeat center center / cover !important;
+  /*background: url(../../plugins/images/login-register.jpg) no-repeat center center / cover !important;*/
   width: 500px;
   height: 100%;
   position: fixed;
@@ -4019,7 +4019,7 @@ table.focus-on tbody tr.focused td {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  /*background: rgba(0, 0, 0, 0.5);*/
 }
 .new-login-register .lg-info-panel .lg-content {
   margin-top: 50%;
@@ -16377,7 +16377,7 @@ ul.pro-amenities li span i {
     width: 450px;
   }
   .new-login-register .new-login-box {
-    margin-left: 500px;
+    /*margin-left: 500px;*/
   }
 }
 /*Small Desktop*/
@@ -16449,7 +16449,7 @@ ul.pro-amenities li span i {
     display: none;
   }
   .new-login-register .new-login-box {
-    margin: 0px auto;
+    /*margin: 0px auto;*/
     margin-top: 10%;
   }
   .col-in {
@@ -16676,7 +16676,7 @@ ul.pro-amenities li span i {
     display: none;
   }
   .new-login-register .new-login-box {
-    margin: 0px auto;
+    /*margin: 0px auto;*/
     width: 300px;
     margin-top: 10%;
   }

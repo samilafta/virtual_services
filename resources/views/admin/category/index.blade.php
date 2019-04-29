@@ -26,11 +26,11 @@
 
     <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h4 class="page-title">Product Divisions</h4> </div>
+            <h4 class="page-title">Product Category</h4> </div>
         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
             <ol class="breadcrumb">
                 <li><a href="javascript:void(0)">Dashboard</a></li>
-                <li class="active">Product Divisions</li>
+                <li class="active">Product Categories</li>
             </ol>
         </div>
         <!-- /.col-lg-12 -->
@@ -39,7 +39,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="white-box">
-                <h3 class="box-title m-b-0">Orders</h3>
+                <h3 class="box-title m-b-0">Categories</h3>
 
                 @if (session()->has('success_message'))
                     <div class="alert alert-success">
@@ -52,8 +52,8 @@
                            data-tablesaw-sortable data-tablesaw-sortable-switch data-tablesaw-minimap data-tablesaw-mode-switch>
                         <thead>
                         <tr>
-                            <th>Division Name</th>
-                            <th>Division Image</th>
+                            <th>Category Name</th>
+                            <th>Category Image</th>
                             <th></th>
                         </tr>
                         </thead>
@@ -66,10 +66,12 @@
                                 <td><img src="{{ asset($category->image) }}" alt="{{ $category->name }}" width="90px" height="50px" /></td>
 
                                 <td style="font-size: 15pt;">
-                                    <a class="btn btn-primary" href="{{ route('categories.edit', ['category' => $category->id]) }}">
+                                    <a class="btn btn-primary" href="{{ route('categories.edit', ['category' => $category->id]) }}"
+                                       style="background-color: #282828;">
                                         Change
                                     </a>
-                                    <a class="btn btn-danger" href="#" data-toggle="modal" data-target="#delete_confirm{{ $category->id }}">
+                                    <a class="btn btn-danger" href="#" data-toggle="modal" data-target="#delete_confirm{{ $category->id }}"
+                                       style="background-color: #282828;">
                                         Remove
                                     </a>
                                     <div id="delete_confirm{{ $category->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

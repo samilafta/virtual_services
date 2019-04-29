@@ -93,7 +93,7 @@
 
                                                     <div class="col-12">
                                                         <label>Order Notes </label>
-                                                        <textarea name="message" cols="70" rows="10" placeholder="Notes about Your Order, e.g.Special Note for Delivery"></textarea>
+                                                        <textarea name="message" cols="80" rows="10" placeholder="Notes about Your Order, e.g.Special Note for Delivery"></textarea>
                                                     </div>
                                                 </div>
 

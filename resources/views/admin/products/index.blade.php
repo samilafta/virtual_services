@@ -39,7 +39,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="white-box">
-                <h3 class="box-title m-b-0">Orders</h3>
+                <h3 class="box-title m-b-0">Products List</h3>
 
                 @if (session()->has('success_message'))
                     <div class="alert alert-success">
@@ -47,74 +47,174 @@
                     </div>
                 @endif
 
-                @if($products->count() > 0)
-                    <table class="tablesaw table-bordered table-hover table" data-tablesaw-mode="swipe"
-                           data-tablesaw-sortable data-tablesaw-sortable-switch data-tablesaw-minimap data-tablesaw-mode-switch>
-                        <thead>
-                        <tr>
-                            <th>Product Name</th>
-                            <th>Product Image</th>
-                            <th>Product Price (GHS)</th>
-                            <th>Stock</th>
-                            <th></th>
-                        </tr>
-                        </thead>
-                        <tbody>
+                <ul class="nav nav-tabs">
+                    @foreach($categories as $category)
 
-                        @foreach($products as $product)
+                        <li><a data-toggle="tab" href="#tab{{ $category->id }}">{{ $category->name }}</a></li>
 
-                            <tr>
-                                <td style="font-size: 15pt;">{{ $product->name }}</td>
-                                <td><img src="{{ asset($product->image) }}" alt="{{ $product->name }}" width="90px" height="50px" /></td>
-                                <td style="font-size: 15pt;">{{ $product->price }}</td>
-                                <td style="font-size: 15pt;">{{ $product->stock }}</td>
-                                <td>
-                                    <a class="btn btn-primary" href="{{ route('products.edit', ['product' => $product->id]) }}">
-                                        Change
-                                    </a>
-                                    <a class="btn btn-danger" href="#" data-toggle="modal" data-target="#delete_confirm{{ $product->id }}">
-                                        Remove
-                                    </a>
-                                    <div id="delete_confirm{{ $product->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                    <h4 class="modal-title" id="myModalLabel"> Delete Product: {{ $product->name }}</h4> </div>
-                                                <div class="modal-body">
+                    @endforeach
 
-                                                    <form action="{{ route('products.destroy', ['product' => $product->id]) }}" method="post">                                                        @csrf
-                                                        {{ @method_field('DELETE') }}
+                </ul>
 
-                                                        <button type="submit" class="btn btn-danger">Delete</button>
-                                                        <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Close</button>
+                <div class="tab-content">
+                @foreach($categories as $category)
 
-                                                    </form>
+                    <div id="tab{{ $category->id }}" class="tab-pane fade in">
+
+                        @if($category->products->count() > 0)
+
+                            <table class="tablesaw table-bordered table-hover table" data-tablesaw-mode="swipe"
+                                   data-tablesaw-sortable data-tablesaw-sortable-switch data-tablesaw-minimap data-tablesaw-mode-switch>
+                                <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Product Image</th>
+                                    <th>Product Price (GHS)</th>
+                                    {{--<th>Category</th>--}}
+                                    <th>Stock</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                @foreach($category->products as $product)
+
+                                    <tr>
+                                        <td style="font-size: 15pt;">{{ $product->name }}</td>
+                                        <td><img src="{{ asset($product->image) }}" alt="{{ $product->name }}" width="90px" height="50px" /></td>
+                                        <td style="font-size: 15pt;">{{ $product->price }}</td>
+                                        {{--<td style="font-size: 15pt;">{{ $product->category->name }}</td>--}}
+                                        <td style="font-size: 15pt;">{{ $product->stock }}</td>
+                                        <td>
+                                            <a class="btn btn-primary" href="{{ route('products.edit', ['product' => $product->id]) }}"
+                                               style="background-color: #282828;">
+                                                Change
+                                            </a>
+                                            <a class="btn btn-danger" href="#" data-toggle="modal" data-target="#delete_confirm{{ $product->id }}"
+                                               style="background-color: #282828;">
+                                                Remove
+                                            </a>
+                                            <div id="delete_confirm{{ $product->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                            <h4 class="modal-title" id="myModalLabel"> Delete Product: {{ $product->name }}</h4> </div>
+                                                        <div class="modal-body">
+
+                                                            <form action="{{ route('products.destroy', ['product' => $product->id]) }}" method="post">                                                        @csrf
+                                                                {{ @method_field('DELETE') }}
+
+                                                                <button type="submit" class="btn btn-danger">Delete</button>
+                                                                <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Close</button>
+
+                                                            </form>
+                                                        </div>
+                                                        {{--<div class="modal-footer">--}}
+                                                        {{--<button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Close</button>--}}
+                                                        {{--</div>--}}
+                                                    </div>
+                                                    <!-- /.modal-content -->
                                                 </div>
+                                                <!-- /.modal-dialog -->
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
+                                    <!-- Modal for showing delete confirmation -->
+
+                                @endforeach
+
+                                </tbody>
+                            </table>
+
+                        @else
+
+                            <h3>No Products added yet</h3>
+
+                        @endif
+
+                    </div>
+
+                @endforeach
+                </div>
+
+
+
+                {{--@if($products->count() > 0)--}}
+
+                    {{--<table class="tablesaw table-bordered table-hover table" data-tablesaw-mode="swipe"--}}
+                           {{--data-tablesaw-sortable data-tablesaw-sortable-switch data-tablesaw-minimap data-tablesaw-mode-switch>--}}
+                        {{--<thead>--}}
+                        {{--<tr>--}}
+                            {{--<th>Product Name</th>--}}
+                            {{--<th>Product Image</th>--}}
+                            {{--<th>Product Price (GHS)</th>--}}
+                            {{--<th>Category</th>--}}
+                            {{--<th>Stock</th>--}}
+                            {{--<th></th>--}}
+                        {{--</tr>--}}
+                        {{--</thead>--}}
+                        {{--<tbody>--}}
+
+                        {{--@foreach($products as $product)--}}
+
+                            {{--<tr>--}}
+                                {{--<td style="font-size: 15pt;">{{ $product->name }}</td>--}}
+                                {{--<td><img src="{{ asset($product->image) }}" alt="{{ $product->name }}" width="90px" height="50px" /></td>--}}
+                                {{--<td style="font-size: 15pt;">{{ $product->price }}</td>--}}
+                                {{--<td style="font-size: 15pt;">{{ $product->category->name }}</td>--}}
+                                {{--<td style="font-size: 15pt;">{{ $product->stock }}</td>--}}
+                                {{--<td>--}}
+                                    {{--<a class="btn btn-primary" href="{{ route('products.edit', ['product' => $product->id]) }}"--}}
+                                       {{--style="background-color: #282828;">--}}
+                                        {{--Change--}}
+                                    {{--</a>--}}
+                                    {{--<a class="btn btn-danger" href="#" data-toggle="modal" data-target="#delete_confirm{{ $product->id }}"--}}
+                                       {{--style="background-color: #282828;">--}}
+                                        {{--Remove--}}
+                                    {{--</a>--}}
+                                    {{--<div id="delete_confirm{{ $product->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">--}}
+                                        {{--<div class="modal-dialog">--}}
+                                            {{--<div class="modal-content">--}}
+                                                {{--<div class="modal-header">--}}
+                                                    {{--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>--}}
+                                                    {{--<h4 class="modal-title" id="myModalLabel"> Delete Product: {{ $product->name }}</h4> </div>--}}
+                                                {{--<div class="modal-body">--}}
+
+                                                    {{--<form action="{{ route('products.destroy', ['product' => $product->id]) }}" method="post">                                                        @csrf--}}
+                                                        {{--{{ @method_field('DELETE') }}--}}
+
+                                                        {{--<button type="submit" class="btn btn-danger">Delete</button>--}}
+                                                        {{--<button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Close</button>--}}
+
+                                                    {{--</form>--}}
+                                                {{--</div>--}}
                                                 {{--<div class="modal-footer">--}}
                                                 {{--<button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Close</button>--}}
                                                 {{--</div>--}}
-                                            </div>
-                                            <!-- /.modal-content -->
-                                        </div>
-                                        <!-- /.modal-dialog -->
-                                    </div>
+                                            {{--</div>--}}
+                                            {{--<!-- /.modal-content -->--}}
+                                        {{--</div>--}}
+                                        {{--<!-- /.modal-dialog -->--}}
+                                    {{--</div>--}}
 
-                                </td>
-                            </tr>
+                                {{--</td>--}}
+                            {{--</tr>--}}
 
-                            <!-- Modal for showing delete confirmation -->
+                            {{--<!-- Modal for showing delete confirmation -->--}}
 
-                        @endforeach
+                        {{--@endforeach--}}
 
-                        </tbody>
-                    </table>
+                        {{--</tbody>--}}
+                    {{--</table>--}}
 
-                @else
+                {{--@else--}}
 
-                    <h3>No Products added yet</h3>
+                    {{--<h3>No Products added yet</h3>--}}
 
-                @endif
+                {{--@endif--}}
 
             </div>
         </div>
@@ -125,7 +225,6 @@
 @endsection
 
 @section('scripts')
-
 
     <!-- jQuery -->
     <script src="{{ asset('admin/plugins/bower_components/jquery/dist/jquery.min.js') }}"></script>

@@ -29,7 +29,7 @@ class AdminController extends Controller
 
         $orders = Order::orderBy('created_at', 'desc')->get();
 
-        return view('dashboard', compact('orders'));
+        return view('dashboard', compact('orders', 'todays_orders', 'todays_amt', 'total_orders', 'total_revenue'));
 
 ////        dd($todays_amt);
 //

@@ -73,7 +73,7 @@
                     </div>
 
                     <div class="text-center">
-                        <button type="submit" class="btn btn-info btn-fill btn-wd">Generate</button>
+                        <button type="submit" class="btn btn-info btn-fill btn-wd" style="background-color: #282828;">Generate</button>
                     </div>
                     <div class="clearfix"></div>
                 </form>
@@ -125,7 +125,7 @@
                     </div>
 
                     <div class="text-center">
-                        <button type="submit" class="btn btn-info btn-fill btn-wd">Generate</button>
+                        <button type="submit" class="btn btn-info btn-fill btn-wd" style="background-color: #282828;">Generate</button>
                     </div>
                     <div class="clearfix"></div>
                 </form>

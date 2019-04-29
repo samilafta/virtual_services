@@ -55,6 +55,10 @@
                     <div class="product-single-w3l">
                         <p>{!! $product->description !!}}</p>
                     </div>
+
+                    <div class="product-single-w3l">
+                        <p>Units Left: {{ $product->stock }}</p>
+                    </div>
                     <div class="occasion-cart">
                         <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
                             <form action="{{ route('shop.addtocart') }}" method="POST" class="side-by-side">

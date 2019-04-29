@@ -37,6 +37,83 @@
     </div>
 
     <div class="row">
+        <div class="col-sm-12">
+            <div class="white-box">
+                <div class="row row-in">
+                    <div class="col-lg-3 col-sm-6 row-in-br">
+                        <ul class="col-in">
+                            <li>
+                                <span class="circle circle-md bg-danger"><i class="ti-clipboard"></i></span>
+                            </li>
+                            <li class="col-last"><h3 class="counter text-right m-t-15">{{ $todays_orders }}</h3></li>
+                            <li class="col-middle">
+                                <h4>Today's Orders</h4>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                        <span class="sr-only">{{ $todays_orders }}</span>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 row-in-br  b-r-none">
+                        <ul class="col-in">
+                            <li>
+                                <span class="circle circle-md bg-info"><i class="ti-wallet"></i></span>
+                            </li>
+                            <li class="col-last"><h3 class="counter text-right m-t-15">GHS {{ $todays_amt }}</h3></li>
+                            <li class="col-middle">
+                                <h4>Today's Revenue</h4>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                        <span class="sr-only">GHS {{ $todays_amt }}</span>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 row-in-br">
+                        <ul class="col-in">
+                            <li>
+                                <span class="circle circle-md bg-success"><i class=" ti-shopping-cart"></i></span>
+                            </li>
+                            <li class="col-last"><h3 class="counter text-right m-t-15">{{ $total_orders }}</h3></li>
+                            <li class="col-middle">
+                                <h4>Total Orders</h4>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                        <span class="sr-only"> {{ $total_orders }}</span>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-sm-6  b-0">
+                        <ul class="col-in">
+                            <li>
+                                <span class="circle circle-md bg-warning"><i class="fa fa-dollar"></i></span>
+                            </li>
+                            <li class="col-last"><h3 class="counter text-right m-t-15">GHS {{ $total_revenue }}</h3></li>
+                            <li class="col-middle">
+                                <h4>Total Revenue</h4>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                        <span class="sr-only">GHS {{ $total_revenue }}</span>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
         <div class="col-lg-12">
             <div class="white-box">
                 <h3 class="box-title m-b-0">Orders</h3>
@@ -63,22 +140,23 @@
                             <td style="font-size: 15pt;">{{ $order->payment_method }}</td>
                             <td style="font-size: 15pt;">
                                 @if($order->payment_status == 0)
-                                    <label class="label label-warning" style="color: #ffffff;"> Not Paid</label>
+                                    <label class="label label-warning" style="color: #ffffff; background-color: #282828;"> Not Paid</label>
                                 @else
-                                    <label class="label label-success" style="color: #ffffff;"> Paid</label>
+                                    <label class="label label-success" style="color: #ffffff; background-color: #282828;"> Paid</label>
                                 @endif
                             </td>
                             <td style="font-size: 15pt;">{{ $order->total_amount }}</td>
                             <td class="quantity cart-plus" style="font-size: 15pt;">
                                 @if($order->status == 0)
-                                    <label class="label label-warning" style="color: #ffffff;">Not Delivered</label>
+                                    <label class="label label-warning" style="color: #ffffff; background-color: #282828;">Not Delivered</label>
                                 @else
-                                    <label class="label label-success" style="color: #ffffff;">Delivered</label>
+                                    <label class="label label-success" style="color: #ffffff; background-color: #282828;">Delivered</label>
                                 @endif
                             </td>
                             <td style="font-size: 15pt;">
                                 {{--<button class="btn btn-xs btn-primary">--}}
-                                <a data-toggle="modal" class="btn btn-primary" data-target="#viewItem{{ $order->cart_id }}">
+                                <a data-toggle="modal" class="btn btn-primary" data-target="#viewItem{{ $order->cart_id }}"
+                                 style="background-color: #282828;">
                                     view</a>
 
                                 <div id="viewItem{{ $order->cart_id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -89,7 +167,7 @@
                                                 <h4 class="modal-title" id="myModalLabel">Your Order: {{ $order->order_code }}</h4> </div>
                                             <div class="modal-body" id="printarea">
 
-                                                <p><strong>Virtual IT Service</strong></p>
+                                                <p><strong>Dexcel Media Solutions</strong></p>
                                                 <p><strong>Date: </strong>{{ $order->created_at }}</p>
                                                 <p><strong>Order Code: </strong>{{ $order->order_code }}</p>
 
@@ -132,12 +210,12 @@
                                 </div>
 
                             @if($order->payment_status == 0)
-                                    <a href="{{ route('orders.pay', ['id' => $order->id]) }}" class="btn btn-primary">
+                                    <a href="{{ route('orders.pay', ['id' => $order->id]) }}" class="btn btn-primary" style="background-color: #282828;">
                                         pay
                                     </a>
                                 @endif
                                 @if($order->status == 0)
-                                    <a href="{{ route('orders.deliver', ['id' => $order->id]) }}" class="btn btn-primary">
+                                    <a href="{{ route('orders.deliver', ['id' => $order->id]) }}" class="btn btn-primary" style="background-color: #282828;">
                                         deliver
                                     </a>
                                 @endif

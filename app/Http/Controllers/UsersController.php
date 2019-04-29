@@ -41,13 +41,15 @@ class UsersController extends Controller
     {
 
         $this->validate($request, [
-            'name' => 'required|max:50',
+            'firstname' => 'required|max:50',
+            'lastname' => 'required|max:50',
             'email' => 'required|email|unique:users',
             'password' => 'required',
         ]);
 
         User::create([
-            'name' => $request->name,
+            'firstname' => $request->firstname,
+            'lastname' => $request->lastname,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
@@ -96,14 +98,16 @@ class UsersController extends Controller
     {
 
         $this->validate($request, [
-            'name' => 'required|max:70',
+//            'firstname' => 'required|max:50',
+//            'lastname' => 'required|max:50',
             'email' => 'required|email',
 
         ]);
 
         $user = User::find($id);
 
-        $user->name = $request->name;
+        $user->firstname = $request->firstname;
+        $user->lastname = $request->lastname;
         $user->email = $request->email;
 
         $user->save();

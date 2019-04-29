@@ -92,8 +92,6 @@ Route::post('cart/qty/{id}' , [
 
 Route::group(['middleware' => ['auth:customer']], function() {
 
-
-
     Route::get('checkout' , [
         'uses' => 'ShopFrontController@displayCheckout',
         'as' => 'shop.checkout'
@@ -109,11 +107,7 @@ Route::group(['middleware' => ['auth:customer']], function() {
         'as' => 'shop.orders'
     ]);
 
-
 });
-
-
-
 
 
 ###########################################################################################
@@ -169,10 +163,7 @@ Route::group(['middleware' => ['auth']], function() {
             'as' => 'reports.generate.custom'
         ]);
 
-
     });
-
-
 
 });
 

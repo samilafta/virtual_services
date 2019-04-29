@@ -50,6 +50,10 @@ class CartController extends Controller
 
         ]);
 
+        Product::find($request->id)->decrement('stock', $request->quantity);
+
+//        dd( $product->stock);
+
         Cart::instance($instance)->add($request->id, $request->name, $request->quantity, $request->price)->associate(Product::class);
 
         return redirect(route('shop.cart'))->withSuccessMessage('Item was added to your cart!');

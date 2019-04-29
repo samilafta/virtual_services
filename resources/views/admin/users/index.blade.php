@@ -52,7 +52,8 @@
                            data-tablesaw-sortable data-tablesaw-sortable-switch data-tablesaw-minimap data-tablesaw-mode-switch>
                         <thead>
                         <tr>
-                            <th>Name</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
                             <th>Email</th>
                             <th></th>
                         </tr>
@@ -62,13 +63,16 @@
                         @foreach($users as $user)
 
                             <tr>
-                                <td style="font-size: 15pt;">{{ $user->name }}</td>
+                                <td style="font-size: 15pt;">{{ $user->firstname }}</td>
+                                <td style="font-size: 15pt;">{{ $user->lastname }}</td>
                                 <td style="font-size: 15pt;">{{ $user->email }}</td>
                                 <td style="font-size: 15pt;">
-                                    <a class="btn btn-primary" href="{{ route('users.edit', ['user' => $user->id]) }}">
+                                    <a class="btn btn-primary" href="{{ route('users.edit', ['user' => $user->id]) }}"
+                                       style="background-color: #282828;">
                                         Change
                                     </a>
-                                    <a class="btn btn-danger" href="#" data-toggle="modal" data-target="#delete_confirm{{ $user->id }}">
+                                    <a class="btn btn-danger" href="#" data-toggle="modal" data-target="#delete_confirm{{ $user->id }}"
+                                       style="background-color: #282828;">
                                         Remove
                                     </a>
                                     <div id="delete_confirm{{ $user->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

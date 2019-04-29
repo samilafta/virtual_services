@@ -61,8 +61,17 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Name</label>
-                                        <input type="text" class="form-control border-input" name="name" value="{{ $user->name }}" required>
+                                        <label>First Name</label>
+                                        <input type="text" class="form-control border-input" name="name" value="{{ $user->firstname }}" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Last Name</label>
+                                        <input type="text" class="form-control border-input" name="name" value="{{ $user->lastname }}" required>
                                     </div>
                                 </div>
                             </div>

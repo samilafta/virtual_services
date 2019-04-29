@@ -26,11 +26,11 @@
 
     <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h4 class="page-title">Product Divisions</h4> </div>
+            <h4 class="page-title">Product Categories</h4> </div>
         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
             <ol class="breadcrumb">
                 <li><a href="javascript:void(0)">Dashboard</a></li>
-                <li class="active">Product Divisions</li>
+                <li class="active">Product Categories</li>
             </ol>
         </div>
         <!-- /.col-lg-12 -->
@@ -39,7 +39,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="white-box">
-                <h3 class="box-title m-b-0">Add Product Divisions</h3>
+                <h3 class="box-title m-b-0">Add Product Categories</h3>
                 <div class="row">
 
                     @if (session()->has('success_message'))
@@ -60,11 +60,11 @@
                             @csrf
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Division Name</label>
+                                <label for="exampleInputEmail1">Category Name</label>
                                 <input type="text" class="form-control" name="name" id="exampleInputEmail1" required>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Division Image</label>
+                                <label for="exampleInputEmail1">Category Image</label>
                                 <input type="file" class="form-control border-input" name="image" required>
                             </div>
 

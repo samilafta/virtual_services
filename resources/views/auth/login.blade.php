@@ -30,16 +30,16 @@
     <div class="cssload-speeding-wheel"></div>
 </div>
 <section id="wrapper" class="new-login-register">
-    <div class="lg-info-panel">
-        <div class="inner-panel">
-            <a href="javascript:void(0)" class="p-20 di"><img src="{{ asset('admin/plugins/images/admin-logo.png') }}"></a>
-            <div class="lg-content">
-                <h2>DEXCEL MEDIA SOLUTIONS</h2>
+    {{--<div class="lg-info-panel">--}}
+        {{--<div class="inner-panel">--}}
+            {{--<a href="javascript:void(0)" class="p-20 di"><img src="{{ asset('admin/plugins/images/admin-logo.png') }}"></a>--}}
+            {{--<div class="lg-content">--}}
+                {{--<h2>DEXCEL MEDIA SOLUTIONS</h2>--}}
                 {{--<p class="text-muted">with this admin you can get 2000+ pages, 500+ ui component, 2000+ icons, different demos and many more... </p>--}}
                 {{--<a href="javascript:void(0)" class="btn btn-rounded btn-danger p-l-20 p-r-20"> Buy now</a>--}}
-            </div>
-        </div>
-    </div>
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
     <div class="new-login-box">
         <div class="white-box">
             <h3 class="box-title m-b-0">Sign In to Admin</h3>

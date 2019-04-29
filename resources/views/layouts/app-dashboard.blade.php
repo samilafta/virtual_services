@@ -48,7 +48,8 @@
             <!-- Search input and Toggle icon -->
             <ul class="nav navbar-top-links navbar-right pull-right">
                 <li class="dropdown">
-                    <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="javascript:void(0)"><b class="hidden-xs">{{ Auth::user()->name }}</b><span class="caret"></span> </a>
+                    <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="javascript:void(0)"><b class="hidden-xs">
+                            {{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</b><span class="caret"></span> </a>
                     <ul class="dropdown-menu dropdown-user animated flipInY">
                         <li>
                             <div class="dw-user-box">
@@ -86,10 +87,10 @@
                         <span class="hide-menu"> Dashboard <span class="fa arrow"></span> <span class="label label-rouded label-inverse pull-right">4</span></span></a>
                 </li>
                 <li> <a href="javascript:void(0)" class="waves-effect @yield('active-ca')"><i class="mdi mdi-content-copy fa-fw"></i>
-                        <span class="hide-menu">Divisions<span class="fa arrow"></span><span class="label label-rouded label-warning pull-right">30</span></span></a>
+                        <span class="hide-menu">Categories<span class="fa arrow"></span><span class="label label-rouded label-warning pull-right">30</span></span></a>
                     <ul class="nav nav-second-level">
-                        <li> <a href="{{ route('categories.create') }}"><span class="hide-menu">Add Division</span></a> </li>
-                        <li> <a href="{{ route('categories.index') }}"><span class="hide-menu">Divisions List</span></a> </li>
+                        <li> <a href="{{ route('categories.create') }}"><span class="hide-menu">Add Category</span></a> </li>
+                        <li> <a href="{{ route('categories.index') }}"><span class="hide-menu">Categories List</span></a> </li>
                     </ul>
                 </li>
                 <li class="devider"></li>
